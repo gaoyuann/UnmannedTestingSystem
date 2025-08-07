@@ -97,25 +97,65 @@ build CMakeFiles/UnmannedTestingSystem.dir/DBUtil.cpp.obj: CXX_COMPILER__Unmanne
   OBJECT_DIR = CMakeFiles\UnmannedTestingSystem.dir
   OBJECT_FILE_DIR = CMakeFiles\UnmannedTestingSystem.dir
 
+build CMakeFiles/UnmannedTestingSystem.dir/ControlStationManageWindow.cpp.obj: CXX_COMPILER__UnmannedTestingSystem_unscanned_Debug D$:/UnmannedTesting/UnmannedTestingSystem-master/ControlStationManageWindow.cpp || cmake_object_order_depends_target_UnmannedTestingSystem
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_SQL_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\UnmannedTestingSystem.dir\ControlStationManageWindow.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always
+  INCLUDES = -ID:/UnmannedTesting/UnmannedTestingSystem-master/build/Desktop_Qt_6_9_1_MinGW_64_bit_04a9c2-Debug/UnmannedTestingSystem_autogen/include -isystem D:/Qt/6.9.1/mingw_64/include/QtCore -isystem D:/Qt/6.9.1/mingw_64/include -isystem D:/Qt/6.9.1/mingw_64/mkspecs/win32-g++ -isystem D:/Qt/6.9.1/mingw_64/include/QtWidgets -isystem D:/Qt/6.9.1/mingw_64/include/QtGui -isystem D:/Qt/6.9.1/mingw_64/include/QtSql
+  OBJECT_DIR = CMakeFiles\UnmannedTestingSystem.dir
+  OBJECT_FILE_DIR = CMakeFiles\UnmannedTestingSystem.dir
+
+build CMakeFiles/UnmannedTestingSystem.dir/ControlStationDialog.cpp.obj: CXX_COMPILER__UnmannedTestingSystem_unscanned_Debug D$:/UnmannedTesting/UnmannedTestingSystem-master/ControlStationDialog.cpp || cmake_object_order_depends_target_UnmannedTestingSystem
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_SQL_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\UnmannedTestingSystem.dir\ControlStationDialog.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always
+  INCLUDES = -ID:/UnmannedTesting/UnmannedTestingSystem-master/build/Desktop_Qt_6_9_1_MinGW_64_bit_04a9c2-Debug/UnmannedTestingSystem_autogen/include -isystem D:/Qt/6.9.1/mingw_64/include/QtCore -isystem D:/Qt/6.9.1/mingw_64/include -isystem D:/Qt/6.9.1/mingw_64/mkspecs/win32-g++ -isystem D:/Qt/6.9.1/mingw_64/include/QtWidgets -isystem D:/Qt/6.9.1/mingw_64/include/QtGui -isystem D:/Qt/6.9.1/mingw_64/include/QtSql
+  OBJECT_DIR = CMakeFiles\UnmannedTestingSystem.dir
+  OBJECT_FILE_DIR = CMakeFiles\UnmannedTestingSystem.dir
+
+build CMakeFiles/UnmannedTestingSystem.dir/ProtocolManageWindow.cpp.obj: CXX_COMPILER__UnmannedTestingSystem_unscanned_Debug D$:/UnmannedTesting/UnmannedTestingSystem-master/ProtocolManageWindow.cpp || cmake_object_order_depends_target_UnmannedTestingSystem
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_SQL_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\UnmannedTestingSystem.dir\ProtocolManageWindow.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always
+  INCLUDES = -ID:/UnmannedTesting/UnmannedTestingSystem-master/build/Desktop_Qt_6_9_1_MinGW_64_bit_04a9c2-Debug/UnmannedTestingSystem_autogen/include -isystem D:/Qt/6.9.1/mingw_64/include/QtCore -isystem D:/Qt/6.9.1/mingw_64/include -isystem D:/Qt/6.9.1/mingw_64/mkspecs/win32-g++ -isystem D:/Qt/6.9.1/mingw_64/include/QtWidgets -isystem D:/Qt/6.9.1/mingw_64/include/QtGui -isystem D:/Qt/6.9.1/mingw_64/include/QtSql
+  OBJECT_DIR = CMakeFiles\UnmannedTestingSystem.dir
+  OBJECT_FILE_DIR = CMakeFiles\UnmannedTestingSystem.dir
+
+build CMakeFiles/UnmannedTestingSystem.dir/ProtocolDialog.cpp.obj: CXX_COMPILER__UnmannedTestingSystem_unscanned_Debug D$:/UnmannedTesting/UnmannedTestingSystem-master/ProtocolDialog.cpp || cmake_object_order_depends_target_UnmannedTestingSystem
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_SQL_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\UnmannedTestingSystem.dir\ProtocolDialog.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always
+  INCLUDES = -ID:/UnmannedTesting/UnmannedTestingSystem-master/build/Desktop_Qt_6_9_1_MinGW_64_bit_04a9c2-Debug/UnmannedTestingSystem_autogen/include -isystem D:/Qt/6.9.1/mingw_64/include/QtCore -isystem D:/Qt/6.9.1/mingw_64/include -isystem D:/Qt/6.9.1/mingw_64/mkspecs/win32-g++ -isystem D:/Qt/6.9.1/mingw_64/include/QtWidgets -isystem D:/Qt/6.9.1/mingw_64/include/QtGui -isystem D:/Qt/6.9.1/mingw_64/include/QtSql
+  OBJECT_DIR = CMakeFiles\UnmannedTestingSystem.dir
+  OBJECT_FILE_DIR = CMakeFiles\UnmannedTestingSystem.dir
+
+build CMakeFiles/UnmannedTestingSystem.dir/MessageFormatDialog.cpp.obj: CXX_COMPILER__UnmannedTestingSystem_unscanned_Debug D$:/UnmannedTesting/UnmannedTestingSystem-master/MessageFormatDialog.cpp || cmake_object_order_depends_target_UnmannedTestingSystem
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_SQL_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\UnmannedTestingSystem.dir\MessageFormatDialog.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always
+  INCLUDES = -ID:/UnmannedTesting/UnmannedTestingSystem-master/build/Desktop_Qt_6_9_1_MinGW_64_bit_04a9c2-Debug/UnmannedTestingSystem_autogen/include -isystem D:/Qt/6.9.1/mingw_64/include/QtCore -isystem D:/Qt/6.9.1/mingw_64/include -isystem D:/Qt/6.9.1/mingw_64/mkspecs/win32-g++ -isystem D:/Qt/6.9.1/mingw_64/include/QtWidgets -isystem D:/Qt/6.9.1/mingw_64/include/QtGui -isystem D:/Qt/6.9.1/mingw_64/include/QtSql
+  OBJECT_DIR = CMakeFiles\UnmannedTestingSystem.dir
+  OBJECT_FILE_DIR = CMakeFiles\UnmannedTestingSystem.dir
+
+build CMakeFiles/UnmannedTestingSystem.dir/InstructionManageWindow.cpp.obj: CXX_COMPILER__UnmannedTestingSystem_unscanned_Debug D$:/UnmannedTesting/UnmannedTestingSystem-master/InstructionManageWindow.cpp || cmake_object_order_depends_target_UnmannedTestingSystem
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_SQL_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\UnmannedTestingSystem.dir\InstructionManageWindow.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always
+  INCLUDES = -ID:/UnmannedTesting/UnmannedTestingSystem-master/build/Desktop_Qt_6_9_1_MinGW_64_bit_04a9c2-Debug/UnmannedTestingSystem_autogen/include -isystem D:/Qt/6.9.1/mingw_64/include/QtCore -isystem D:/Qt/6.9.1/mingw_64/include -isystem D:/Qt/6.9.1/mingw_64/mkspecs/win32-g++ -isystem D:/Qt/6.9.1/mingw_64/include/QtWidgets -isystem D:/Qt/6.9.1/mingw_64/include/QtGui -isystem D:/Qt/6.9.1/mingw_64/include/QtSql
+  OBJECT_DIR = CMakeFiles\UnmannedTestingSystem.dir
+  OBJECT_FILE_DIR = CMakeFiles\UnmannedTestingSystem.dir
+
+build CMakeFiles/UnmannedTestingSystem.dir/InstructionDialog.cpp.obj: CXX_COMPILER__UnmannedTestingSystem_unscanned_Debug D$:/UnmannedTesting/UnmannedTestingSystem-master/InstructionDialog.cpp || cmake_object_order_depends_target_UnmannedTestingSystem
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_SQL_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\UnmannedTestingSystem.dir\InstructionDialog.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always
+  INCLUDES = -ID:/UnmannedTesting/UnmannedTestingSystem-master/build/Desktop_Qt_6_9_1_MinGW_64_bit_04a9c2-Debug/UnmannedTestingSystem_autogen/include -isystem D:/Qt/6.9.1/mingw_64/include/QtCore -isystem D:/Qt/6.9.1/mingw_64/include -isystem D:/Qt/6.9.1/mingw_64/mkspecs/win32-g++ -isystem D:/Qt/6.9.1/mingw_64/include/QtWidgets -isystem D:/Qt/6.9.1/mingw_64/include/QtGui -isystem D:/Qt/6.9.1/mingw_64/include/QtSql
+  OBJECT_DIR = CMakeFiles\UnmannedTestingSystem.dir
+  OBJECT_FILE_DIR = CMakeFiles\UnmannedTestingSystem.dir
+
 build CMakeFiles/UnmannedTestingSystem.dir/TestManageWindow.cpp.obj: CXX_COMPILER__UnmannedTestingSystem_unscanned_Debug D$:/UnmannedTesting/UnmannedTestingSystem-master/TestManageWindow.cpp || cmake_object_order_depends_target_UnmannedTestingSystem
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_SQL_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
   DEP_FILE = CMakeFiles\UnmannedTestingSystem.dir\TestManageWindow.cpp.obj.d
-  FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always
-  INCLUDES = -ID:/UnmannedTesting/UnmannedTestingSystem-master/build/Desktop_Qt_6_9_1_MinGW_64_bit_04a9c2-Debug/UnmannedTestingSystem_autogen/include -isystem D:/Qt/6.9.1/mingw_64/include/QtCore -isystem D:/Qt/6.9.1/mingw_64/include -isystem D:/Qt/6.9.1/mingw_64/mkspecs/win32-g++ -isystem D:/Qt/6.9.1/mingw_64/include/QtWidgets -isystem D:/Qt/6.9.1/mingw_64/include/QtGui -isystem D:/Qt/6.9.1/mingw_64/include/QtSql
-  OBJECT_DIR = CMakeFiles\UnmannedTestingSystem.dir
-  OBJECT_FILE_DIR = CMakeFiles\UnmannedTestingSystem.dir
-
-build CMakeFiles/UnmannedTestingSystem.dir/UserManageWindow.cpp.obj: CXX_COMPILER__UnmannedTestingSystem_unscanned_Debug D$:/UnmannedTesting/UnmannedTestingSystem-master/UserManageWindow.cpp || cmake_object_order_depends_target_UnmannedTestingSystem
-  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_SQL_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
-  DEP_FILE = CMakeFiles\UnmannedTestingSystem.dir\UserManageWindow.cpp.obj.d
-  FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always
-  INCLUDES = -ID:/UnmannedTesting/UnmannedTestingSystem-master/build/Desktop_Qt_6_9_1_MinGW_64_bit_04a9c2-Debug/UnmannedTestingSystem_autogen/include -isystem D:/Qt/6.9.1/mingw_64/include/QtCore -isystem D:/Qt/6.9.1/mingw_64/include -isystem D:/Qt/6.9.1/mingw_64/mkspecs/win32-g++ -isystem D:/Qt/6.9.1/mingw_64/include/QtWidgets -isystem D:/Qt/6.9.1/mingw_64/include/QtGui -isystem D:/Qt/6.9.1/mingw_64/include/QtSql
-  OBJECT_DIR = CMakeFiles\UnmannedTestingSystem.dir
-  OBJECT_FILE_DIR = CMakeFiles\UnmannedTestingSystem.dir
-
-build CMakeFiles/UnmannedTestingSystem.dir/TaskDetailWindow.cpp.obj: CXX_COMPILER__UnmannedTestingSystem_unscanned_Debug D$:/UnmannedTesting/UnmannedTestingSystem-master/TaskDetailWindow.cpp || cmake_object_order_depends_target_UnmannedTestingSystem
-  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_SQL_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
-  DEP_FILE = CMakeFiles\UnmannedTestingSystem.dir\TaskDetailWindow.cpp.obj.d
   FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always
   INCLUDES = -ID:/UnmannedTesting/UnmannedTestingSystem-master/build/Desktop_Qt_6_9_1_MinGW_64_bit_04a9c2-Debug/UnmannedTestingSystem_autogen/include -isystem D:/Qt/6.9.1/mingw_64/include/QtCore -isystem D:/Qt/6.9.1/mingw_64/include -isystem D:/Qt/6.9.1/mingw_64/mkspecs/win32-g++ -isystem D:/Qt/6.9.1/mingw_64/include/QtWidgets -isystem D:/Qt/6.9.1/mingw_64/include/QtGui -isystem D:/Qt/6.9.1/mingw_64/include/QtSql
   OBJECT_DIR = CMakeFiles\UnmannedTestingSystem.dir
@@ -129,6 +169,22 @@ build CMakeFiles/UnmannedTestingSystem.dir/NewTaskWithItemsDialog.cpp.obj: CXX_C
   OBJECT_DIR = CMakeFiles\UnmannedTestingSystem.dir
   OBJECT_FILE_DIR = CMakeFiles\UnmannedTestingSystem.dir
 
+build CMakeFiles/UnmannedTestingSystem.dir/TaskDetailWindow.cpp.obj: CXX_COMPILER__UnmannedTestingSystem_unscanned_Debug D$:/UnmannedTesting/UnmannedTestingSystem-master/TaskDetailWindow.cpp || cmake_object_order_depends_target_UnmannedTestingSystem
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_SQL_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\UnmannedTestingSystem.dir\TaskDetailWindow.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always
+  INCLUDES = -ID:/UnmannedTesting/UnmannedTestingSystem-master/build/Desktop_Qt_6_9_1_MinGW_64_bit_04a9c2-Debug/UnmannedTestingSystem_autogen/include -isystem D:/Qt/6.9.1/mingw_64/include/QtCore -isystem D:/Qt/6.9.1/mingw_64/include -isystem D:/Qt/6.9.1/mingw_64/mkspecs/win32-g++ -isystem D:/Qt/6.9.1/mingw_64/include/QtWidgets -isystem D:/Qt/6.9.1/mingw_64/include/QtGui -isystem D:/Qt/6.9.1/mingw_64/include/QtSql
+  OBJECT_DIR = CMakeFiles\UnmannedTestingSystem.dir
+  OBJECT_FILE_DIR = CMakeFiles\UnmannedTestingSystem.dir
+
+build CMakeFiles/UnmannedTestingSystem.dir/UserManageWindow.cpp.obj: CXX_COMPILER__UnmannedTestingSystem_unscanned_Debug D$:/UnmannedTesting/UnmannedTestingSystem-master/UserManageWindow.cpp || cmake_object_order_depends_target_UnmannedTestingSystem
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_SQL_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\UnmannedTestingSystem.dir\UserManageWindow.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always
+  INCLUDES = -ID:/UnmannedTesting/UnmannedTestingSystem-master/build/Desktop_Qt_6_9_1_MinGW_64_bit_04a9c2-Debug/UnmannedTestingSystem_autogen/include -isystem D:/Qt/6.9.1/mingw_64/include/QtCore -isystem D:/Qt/6.9.1/mingw_64/include -isystem D:/Qt/6.9.1/mingw_64/mkspecs/win32-g++ -isystem D:/Qt/6.9.1/mingw_64/include/QtWidgets -isystem D:/Qt/6.9.1/mingw_64/include/QtGui -isystem D:/Qt/6.9.1/mingw_64/include/QtSql
+  OBJECT_DIR = CMakeFiles\UnmannedTestingSystem.dir
+  OBJECT_FILE_DIR = CMakeFiles\UnmannedTestingSystem.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target UnmannedTestingSystem
@@ -137,10 +193,10 @@ build CMakeFiles/UnmannedTestingSystem.dir/NewTaskWithItemsDialog.cpp.obj: CXX_C
 #############################################
 # Link the executable UnmannedTestingSystem.exe
 
-build UnmannedTestingSystem.exe: CXX_EXECUTABLE_LINKER__UnmannedTestingSystem_Debug CMakeFiles/UnmannedTestingSystem.dir/UnmannedTestingSystem_autogen/mocs_compilation.cpp.obj CMakeFiles/UnmannedTestingSystem.dir/main.cpp.obj CMakeFiles/UnmannedTestingSystem.dir/MainWindow.cpp.obj CMakeFiles/UnmannedTestingSystem.dir/UnitManageWindow.cpp.obj CMakeFiles/UnmannedTestingSystem.dir/UnitDialog.cpp.obj CMakeFiles/UnmannedTestingSystem.dir/DBUtil.cpp.obj CMakeFiles/UnmannedTestingSystem.dir/TestManageWindow.cpp.obj CMakeFiles/UnmannedTestingSystem.dir/UserManageWindow.cpp.obj CMakeFiles/UnmannedTestingSystem.dir/TaskDetailWindow.cpp.obj CMakeFiles/UnmannedTestingSystem.dir/NewTaskWithItemsDialog.cpp.obj | D$:/Qt/6.9.1/mingw_64/lib/libQt6Widgets.a D$:/Qt/6.9.1/mingw_64/lib/libQt6Sql.a D$:/Qt/6.9.1/mingw_64/lib/libQt6Gui.a D$:/Qt/6.9.1/mingw_64/lib/libQt6Core.a D$:/Qt/6.9.1/mingw_64/lib/libQt6EntryPoint.a || UnmannedTestingSystem_autogen UnmannedTestingSystem_autogen_timestamp_deps
+build UnmannedTestingSystem.exe: CXX_EXECUTABLE_LINKER__UnmannedTestingSystem_Debug CMakeFiles/UnmannedTestingSystem.dir/UnmannedTestingSystem_autogen/mocs_compilation.cpp.obj CMakeFiles/UnmannedTestingSystem.dir/main.cpp.obj CMakeFiles/UnmannedTestingSystem.dir/MainWindow.cpp.obj CMakeFiles/UnmannedTestingSystem.dir/UnitManageWindow.cpp.obj CMakeFiles/UnmannedTestingSystem.dir/UnitDialog.cpp.obj CMakeFiles/UnmannedTestingSystem.dir/DBUtil.cpp.obj CMakeFiles/UnmannedTestingSystem.dir/ControlStationManageWindow.cpp.obj CMakeFiles/UnmannedTestingSystem.dir/ControlStationDialog.cpp.obj CMakeFiles/UnmannedTestingSystem.dir/ProtocolManageWindow.cpp.obj CMakeFiles/UnmannedTestingSystem.dir/ProtocolDialog.cpp.obj CMakeFiles/UnmannedTestingSystem.dir/MessageFormatDialog.cpp.obj CMakeFiles/UnmannedTestingSystem.dir/InstructionManageWindow.cpp.obj CMakeFiles/UnmannedTestingSystem.dir/InstructionDialog.cpp.obj CMakeFiles/UnmannedTestingSystem.dir/TestManageWindow.cpp.obj CMakeFiles/UnmannedTestingSystem.dir/NewTaskWithItemsDialog.cpp.obj CMakeFiles/UnmannedTestingSystem.dir/TaskDetailWindow.cpp.obj CMakeFiles/UnmannedTestingSystem.dir/UserManageWindow.cpp.obj | D$:/Qt/6.9.1/mingw_64/lib/libQt6Sql.a D$:/Qt/6.9.1/mingw_64/lib/libQt6Widgets.a D$:/Qt/6.9.1/mingw_64/lib/libQt6Gui.a D$:/Qt/6.9.1/mingw_64/lib/libQt6Core.a D$:/Qt/6.9.1/mingw_64/lib/libQt6EntryPoint.a || UnmannedTestingSystem_autogen UnmannedTestingSystem_autogen_timestamp_deps
   FLAGS = -DQT_QML_DEBUG -g
   LINK_FLAGS = -mwindows
-  LINK_LIBRARIES = D:/Qt/6.9.1/mingw_64/lib/libQt6Widgets.a  D:/Qt/6.9.1/mingw_64/lib/libQt6Sql.a  D:/Qt/6.9.1/mingw_64/lib/libQt6Gui.a  -ld3d11  -ldxgi  -ldxguid  -ld3d12  D:/Qt/6.9.1/mingw_64/lib/libQt6Core.a  -lmpr  -luserenv  -lmingw32  D:/Qt/6.9.1/mingw_64/lib/libQt6EntryPoint.a  -lshell32  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  LINK_LIBRARIES = D:/Qt/6.9.1/mingw_64/lib/libQt6Sql.a  D:/Qt/6.9.1/mingw_64/lib/libQt6Widgets.a  D:/Qt/6.9.1/mingw_64/lib/libQt6Gui.a  -ld3d11  -ldxgi  -ldxguid  -ld3d12  D:/Qt/6.9.1/mingw_64/lib/libQt6Core.a  -lmpr  -luserenv  -lmingw32  D:/Qt/6.9.1/mingw_64/lib/libQt6EntryPoint.a  -lshell32  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\UnmannedTestingSystem.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
@@ -224,7 +280,7 @@ build UnmannedTestingSystem_autogen_timestamp_deps: phony
 #############################################
 # Utility command for UnmannedTestingSystem_autogen
 
-build UnmannedTestingSystem_autogen: phony CMakeFiles/UnmannedTestingSystem_autogen UnmannedTestingSystem_autogen/include/ui_MainWindow.h UnmannedTestingSystem_autogen/include/ui_UnitManageWindow.h UnmannedTestingSystem_autogen/include/ui_UnitDialog.h UnmannedTestingSystem_autogen/include/ui_TestManageWindow.h UnmannedTestingSystem_autogen/include/ui_UserManageWindow.h UnmannedTestingSystem_autogen/include/ui_TaskDetailWindow.h UnmannedTestingSystem_autogen/include/ui_NewTaskWithItemsDialog.h UnmannedTestingSystem_autogen/timestamp UnmannedTestingSystem_autogen/mocs_compilation.cpp UnmannedTestingSystem_autogen_timestamp_deps
+build UnmannedTestingSystem_autogen: phony CMakeFiles/UnmannedTestingSystem_autogen UnmannedTestingSystem_autogen/include/ui_MainWindow.h UnmannedTestingSystem_autogen/include/ui_UnitManageWindow.h UnmannedTestingSystem_autogen/include/ui_UnitDialog.h UnmannedTestingSystem_autogen/include/ui_ControlStationManageWindow.h UnmannedTestingSystem_autogen/include/ui_ControlStationDialog.h UnmannedTestingSystem_autogen/include/ui_ProtocolManageWindow.h UnmannedTestingSystem_autogen/include/ui_ProtocolDialog.h UnmannedTestingSystem_autogen/include/ui_MessageFormatDialog.h UnmannedTestingSystem_autogen/include/ui_InstructionManageWindow.h UnmannedTestingSystem_autogen/include/ui_InstructionDialog.h UnmannedTestingSystem_autogen/include/ui_TestManageWindow.h UnmannedTestingSystem_autogen/include/ui_NewTaskWithItemsDialog.h UnmannedTestingSystem_autogen/include/ui_TaskDetailWindow.h UnmannedTestingSystem_autogen/include/ui_UserManageWindow.h UnmannedTestingSystem_autogen/timestamp UnmannedTestingSystem_autogen/mocs_compilation.cpp UnmannedTestingSystem_autogen_timestamp_deps
 
 
 #############################################
@@ -241,7 +297,7 @@ build UnmannedTestingSystem_autogen/timestamp UnmannedTestingSystem_autogen/mocs
 #############################################
 # Phony custom command for CMakeFiles\UnmannedTestingSystem_autogen
 
-build CMakeFiles/UnmannedTestingSystem_autogen UnmannedTestingSystem_autogen/include/ui_MainWindow.h UnmannedTestingSystem_autogen/include/ui_UnitManageWindow.h UnmannedTestingSystem_autogen/include/ui_UnitDialog.h UnmannedTestingSystem_autogen/include/ui_TestManageWindow.h UnmannedTestingSystem_autogen/include/ui_UserManageWindow.h UnmannedTestingSystem_autogen/include/ui_TaskDetailWindow.h UnmannedTestingSystem_autogen/include/ui_NewTaskWithItemsDialog.h | ${cmake_ninja_workdir}CMakeFiles/UnmannedTestingSystem_autogen ${cmake_ninja_workdir}UnmannedTestingSystem_autogen/include/ui_MainWindow.h ${cmake_ninja_workdir}UnmannedTestingSystem_autogen/include/ui_UnitManageWindow.h ${cmake_ninja_workdir}UnmannedTestingSystem_autogen/include/ui_UnitDialog.h ${cmake_ninja_workdir}UnmannedTestingSystem_autogen/include/ui_TestManageWindow.h ${cmake_ninja_workdir}UnmannedTestingSystem_autogen/include/ui_UserManageWindow.h ${cmake_ninja_workdir}UnmannedTestingSystem_autogen/include/ui_TaskDetailWindow.h ${cmake_ninja_workdir}UnmannedTestingSystem_autogen/include/ui_NewTaskWithItemsDialog.h: phony UnmannedTestingSystem_autogen/timestamp || UnmannedTestingSystem_autogen_timestamp_deps
+build CMakeFiles/UnmannedTestingSystem_autogen UnmannedTestingSystem_autogen/include/ui_MainWindow.h UnmannedTestingSystem_autogen/include/ui_UnitManageWindow.h UnmannedTestingSystem_autogen/include/ui_UnitDialog.h UnmannedTestingSystem_autogen/include/ui_ControlStationManageWindow.h UnmannedTestingSystem_autogen/include/ui_ControlStationDialog.h UnmannedTestingSystem_autogen/include/ui_ProtocolManageWindow.h UnmannedTestingSystem_autogen/include/ui_ProtocolDialog.h UnmannedTestingSystem_autogen/include/ui_MessageFormatDialog.h UnmannedTestingSystem_autogen/include/ui_InstructionManageWindow.h UnmannedTestingSystem_autogen/include/ui_InstructionDialog.h UnmannedTestingSystem_autogen/include/ui_TestManageWindow.h UnmannedTestingSystem_autogen/include/ui_NewTaskWithItemsDialog.h UnmannedTestingSystem_autogen/include/ui_TaskDetailWindow.h UnmannedTestingSystem_autogen/include/ui_UserManageWindow.h | ${cmake_ninja_workdir}CMakeFiles/UnmannedTestingSystem_autogen ${cmake_ninja_workdir}UnmannedTestingSystem_autogen/include/ui_MainWindow.h ${cmake_ninja_workdir}UnmannedTestingSystem_autogen/include/ui_UnitManageWindow.h ${cmake_ninja_workdir}UnmannedTestingSystem_autogen/include/ui_UnitDialog.h ${cmake_ninja_workdir}UnmannedTestingSystem_autogen/include/ui_ControlStationManageWindow.h ${cmake_ninja_workdir}UnmannedTestingSystem_autogen/include/ui_ControlStationDialog.h ${cmake_ninja_workdir}UnmannedTestingSystem_autogen/include/ui_ProtocolManageWindow.h ${cmake_ninja_workdir}UnmannedTestingSystem_autogen/include/ui_ProtocolDialog.h ${cmake_ninja_workdir}UnmannedTestingSystem_autogen/include/ui_MessageFormatDialog.h ${cmake_ninja_workdir}UnmannedTestingSystem_autogen/include/ui_InstructionManageWindow.h ${cmake_ninja_workdir}UnmannedTestingSystem_autogen/include/ui_InstructionDialog.h ${cmake_ninja_workdir}UnmannedTestingSystem_autogen/include/ui_TestManageWindow.h ${cmake_ninja_workdir}UnmannedTestingSystem_autogen/include/ui_NewTaskWithItemsDialog.h ${cmake_ninja_workdir}UnmannedTestingSystem_autogen/include/ui_TaskDetailWindow.h ${cmake_ninja_workdir}UnmannedTestingSystem_autogen/include/ui_UserManageWindow.h: phony UnmannedTestingSystem_autogen/timestamp || UnmannedTestingSystem_autogen_timestamp_deps
 
 # =============================================================================
 # Target aliases.

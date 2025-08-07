@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MessageFormatDialog</class>
+ <widget class="QDialog" name="MessageFormatDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>报文格式配置</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+    QDialog {
+        background-color: #f5f7fa;
+        font-family: &quot;Microsoft YaHei&quot;, &quot;Segoe UI&quot;, sans-serif;
+    }
+    QTableWidget {
+        font-size: 13px;
+        color: black;
+        background-color: white;
+        alternate-background-color: #f8f9fa;
+        border: 1px solid #e0e0e0;
+        border-radius: 6px;
+        gridline-color: #e0e0e0;
+    }
+    QTableWidget::item {
+        color: black;
+        padding: 8px;
+        border-bottom: 1px solid #f0f0f0;
+    }
+    QTableWidget QLineEdit {
+        color: black;
+    }
+    QHeaderView::section {
+        background-color: #9b59b6;
+        color: white;
+        padding: 8px;
+        border: none;
+        font-weight: 500;
+        font-size: 13px;
+    }
+    QComboBox {
+        color: black;
+        background-color: white;
+        border: 1px solid #d0d0d0;
+        border-radius: 3px;
+        padding: 0px 6px;  /* 上下0px，左右6px */
+        text-align: center;
+        min-width: 100px;
+        max-width: 200px;
+        min-height: 24px;  /* 调整为标准高度 */
+        max-height: 24px;
+        line-height: 24px; /* 行高与高度一致确保垂直居中 */
+        margin: 0px;
+    }
+    QComboBox QAbstractItemView {
+        color: black;
+        text-align: center;
+    }
+   </string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QTableWidget" name="tableFormats">
+     <property name="rowCount">
+      <number>0</number>
+     </property>
+     <property name="columnCount">
+      <number>6</number>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QTableWidget::item { text-align: center; }</string>
+     </property>
+     <column/>
+     <column/>
+     <column/>
+     <column/>
+     <column/>
+     <column/>
+    </widget>
+   </item>
+   <item>
+    <widget class="QWidget" name="buttonWidget" native="true">
+     <property name="styleSheet">
+      <string notr="true">
+       background-color: white;
+       border-radius: 6px;
+       padding: 8px;
+       box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+      </string>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QPushButton" name="btnAdd">
+        <property name="styleSheet">
+         <string notr="true">
+          QPushButton {
+              background-color: #3a6ea5;
+              color: white;
+              border: none;
+              padding: 8px 16px;
+              border-radius: 4px;
+              font-size: 13px;
+              min-width: 80px;
+          }
+          QPushButton:hover {
+              background-color: #4a90e2;
+          }
+          QPushButton:pressed {
+              background-color: #2a5685;
+          }
+         </string>
+        </property>
+        <property name="text">
+         <string>添加</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnRemove">
+        <property name="styleSheet">
+         <string notr="true">
+          QPushButton {
+              background-color: #e74c3c;
+              color: white;
+              border: none;
+              padding: 8px 16px;
+              border-radius: 4px;
+              font-size: 13px;
+              min-width: 80px;
+          }
+          QPushButton:hover {
+              background-color: #c0392b;
+          }
+          QPushButton:pressed {
+              background-color: #992d22;
+          }
+         </string>
+        </property>
+        <property name="text">
+         <string>删除</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Orientation::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnSave">
+        <property name="styleSheet">
+         <string notr="true">
+          QPushButton {
+              background-color: #27ae60;
+              color: white;
+              border: none;
+              padding: 8px 16px;
+              border-radius: 4px;
+              font-size: 13px;
+              min-width: 80px;
+          }
+          QPushButton:hover {
+              background-color: #2ecc71;
+          }
+          QPushButton:pressed {
+              background-color: #219955;
+          }
+         </string>
+        </property>
+        <property name="text">
+         <string>保存</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnCancel">
+        <property name="styleSheet">
+         <string notr="true">
+          QPushButton {
+              background-color: #95a5a6;
+              color: white;
+              border: none;
+              padding: 8px 16px;
+              border-radius: 4px;
+              font-size: 13px;
+              min-width: 80px;
+          }
+          QPushButton:hover {
+              background-color: #7f8c8d;
+          }
+          QPushButton:pressed {
+              background-color: #6c7a7d;
+          }
+         </string>
+        </property>
+        <property name="text">
+         <string>取消</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

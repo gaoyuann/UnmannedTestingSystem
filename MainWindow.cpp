@@ -1,17 +1,31 @@
 #include "MainWindow.h"
 #include "ui_MainWindow.h"
+
+// 包含具体的窗口头文件
 #include "UnitManageWindow.h"
+#include "ControlStationManageWindow.h"
+#include "ProtocolManageWindow.h"
+#include "InstructionManageWindow.h"  // 新增指令管理窗口头文件
 #include "TestManageWindow.h"
+
 #include <QStyle>
+#include <QList>
+#include <QPushButton>
 #include <QMessageBox>
+
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent),
-    ui(new Ui::MainWindow)
+    ui(new Ui::MainWindow),
+    unitManageWindow(nullptr),
+    testManageWindow(nullptr),
+    stationManageWindow(nullptr),
+    protocolManageWindow(nullptr),
+    instructionManageWindow(nullptr)  // 初始化指令管理窗口指针
 {
     ui->setupUi(this);
-    unitManageWindow = nullptr;
-    testManageWindow = nullptr;
+
+    // 设置初始状态
     ui->stackedWidget->setCurrentIndex(0);
     resetAllButtons();
 
@@ -19,15 +33,14 @@ MainWindow::MainWindow(QWidget *parent)
     setupConnections();
 }
 
-
 MainWindow::~MainWindow()
 {
     delete ui;
-    if (unitManageWindow) {
-        delete unitManageWindow;
-    }
-    if (testManageWindow)
-        delete testManageWindow;
+    delete unitManageWindow;
+    delete stationManageWindow;
+    delete protocolManageWindow;
+    delete instructionManageWindow;  // 安全删除指令管理窗口
+    delete testManageWindow;
 }
 
 void MainWindow::setupConnections()
@@ -44,10 +57,7 @@ void MainWindow::setupConnections()
 
 void MainWindow::setActiveButton(QPushButton *btn)
 {
-    // 重置所有按钮状态
     resetAllButtons();
-
-    // 设置当前按钮为活动状态
     btn->setProperty("active", true);
     btn->style()->unpolish(btn);
     btn->style()->polish(btn);
@@ -55,11 +65,9 @@ void MainWindow::setActiveButton(QPushButton *btn)
 
 void MainWindow::resetAllButtons()
 {
-    // 获取所有侧边栏按钮
     QList<QPushButton*> buttons = ui->sideBar->findChildren<QPushButton*>();
-
     foreach (QPushButton *btn, buttons) {
-        if (btn != ui->btnLogout) {  // 排除退出按钮
+        if (btn != ui->btnLogout) {
             btn->setProperty("active", false);
             btn->style()->unpolish(btn);
             btn->style()->polish(btn);
@@ -70,33 +78,47 @@ void MainWindow::resetAllButtons()
 void MainWindow::onBtnUnitsClicked()
 {
     setActiveButton(ui->btnUnits);
-
-    // 如果窗口不存在，则创建并添加到 stackedWidget
     if (!unitManageWindow) {
         unitManageWindow = new UnitManageWindow(this);
         ui->stackedWidget->addWidget(unitManageWindow);
     }
-
-    // 设置当前页面
     ui->stackedWidget->setCurrentWidget(unitManageWindow);
 }
 
 void MainWindow::onBtnStationsClicked()
 {
     setActiveButton(ui->btnStations);
-    ui->stackedWidget->setCurrentWidget(ui->pageStations);
+    if (!stationManageWindow) {
+        stationManageWindow = new ControlStationManageWindow(this);
+        ui->stackedWidget->addWidget(stationManageWindow);
+    }
+    ui->stackedWidget->setCurrentWidget(stationManageWindow);
 }
 
 void MainWindow::onBtnProtocolsClicked()
 {
     setActiveButton(ui->btnProtocols);
-    ui->stackedWidget->setCurrentWidget(ui->pageProtocols);
+    if (!protocolManageWindow) {
+        protocolManageWindow = new ProtocolManageWindow(this);
+        ui->stackedWidget->addWidget(protocolManageWindow);
+    }
+    ui->stackedWidget->setCurrentWidget(protocolManageWindow);
 }
 
 void MainWindow::onBtnCommandsClicked()
 {
     setActiveButton(ui->btnCommands);
-    ui->stackedWidget->setCurrentWidget(ui->pageCommands);
+    if (!instructionManageWindow) {
+        instructionManageWindow = new InstructionManageWindow(this);
+        ui->stackedWidget->addWidget(instructionManageWindow);
+
+        // 连接状态消息信号到主窗口状态栏
+        connect(instructionManageWindow, &InstructionManageWindow::statusMessageRequested,
+                this, [this](const QString &message, int timeout) {
+                    ui->statusbar->showMessage(message, timeout);
+                });
+    }
+    ui->stackedWidget->setCurrentWidget(instructionManageWindow);
 }
 
 void MainWindow::onbtnTestsclicked()
@@ -123,9 +145,5 @@ void MainWindow::onBtnSystemClicked()
 
 void MainWindow::onBtnLogoutClicked()
 {
-    close();  // 关闭主窗口
+    close();
 }
-
-
-
-
