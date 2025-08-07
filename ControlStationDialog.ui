@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ControlStationDialog</class>
+ <widget class="QDialog" name="ControlStationDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>365</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>控制站信息</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: #f5f7fa;</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="spacing">
+    <number>12</number>
+   </property>
+   <property name="leftMargin">
+    <number>12</number>
+   </property>
+   <property name="topMargin">
+    <number>12</number>
+   </property>
+   <property name="rightMargin">
+    <number>12</number>
+   </property>
+   <property name="bottomMargin">
+    <number>12</number>
+   </property>
+   <item>
+    <widget class="QGroupBox" name="groupBox">
+     <property name="styleSheet">
+      <string notr="true">color: rgb(0, 0, 0);
+      QGroupBox {
+          border: 1px solid #d0d0d0;
+          border-radius: 4px;
+          margin-top: 10px;
+          padding-top: 15px;
+          font-weight: bold;
+      }
+      QGroupBox::title {
+          subcontrol-origin: margin;
+          left: 10px;
+          padding: 0 3px;
+      }
+      </string>
+     </property>
+     <property name="title">
+      <string>控制站基本信息</string>
+     </property>
+     <layout class="QFormLayout" name="formLayout">
+      <property name="horizontalSpacing">
+       <number>8</number>
+      </property>
+      <property name="verticalSpacing">
+       <number>8</number>
+      </property>
+      <property name="leftMargin">
+       <number>8</number>
+      </property>
+      <property name="topMargin">
+       <number>16</number>
+      </property>
+      <property name="rightMargin">
+       <number>8</number>
+      </property>
+      <property name="bottomMargin">
+       <number>8</number>
+      </property>
+      <item row="0" column="0">
+       <widget class="QLabel" name="labelName">
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 0);</string>
+        </property>
+        <property name="text">
+         <string>控制站名称：</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="editName">
+        <property name="styleSheet">
+         <string notr="true">
+         QLineEdit {
+             padding: 6px;
+             border: 1px solid #d0d0d0;
+             border-radius: 3px;
+         }
+         QLineEdit:focus {
+             border: 1px solid #4a90e2;
+         }
+         </string>
+        </property>
+        <property name="placeholderText">
+         <string>请输入控制站名称</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="labelUnit">
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 0);</string>
+        </property>
+        <property name="text">
+         <string>所属单位：</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QComboBox" name="comboUnit">
+        <property name="styleSheet">
+         <string notr="true">
+         QComboBox {
+             padding: 6px;
+             border: 1px solid #d0d0d0;
+             border-radius: 3px;
+         }
+         QComboBox::drop-down {
+             width: 20px;
+             border: none;
+         }
+         </string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="labelType">
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 0);</string>
+        </property>
+        <property name="text">
+         <string>控制站类型：</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QComboBox" name="comboType">
+        <property name="styleSheet">
+         <string notr="true">
+         QComboBox {
+             padding: 6px;
+             border: 1px solid #d0d0d0;
+             border-radius: 3px;
+         }
+         QComboBox::drop-down {
+             width: 20px;
+             border: none;
+         }
+         </string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="labelIP">
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 0);</string>
+        </property>
+        <property name="text">
+         <string>IP地址：</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QLineEdit" name="editIP">
+        <property name="styleSheet">
+         <string notr="true">
+         QLineEdit {
+             padding: 6px;
+             border: 1px solid #d0d0d0;
+             border-radius: 3px;
+         }
+         QLineEdit:focus {
+             border: 1px solid #4a90e2;
+         }
+         </string>
+        </property>
+        <property name="placeholderText">
+         <string>例如：192.168.1.100</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="0">
+       <widget class="QLabel" name="labelPort">
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 0);</string>
+        </property>
+        <property name="text">
+         <string>通信端口：</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1">
+       <widget class="QLineEdit" name="editPort">
+        <property name="styleSheet">
+         <string notr="true">
+         QLineEdit {
+             padding: 6px;
+             border: 1px solid #d0d0d0;
+             border-radius: 3px;
+         }
+         QLineEdit:focus {
+             border: 1px solid #4a90e2;
+         }
+         </string>
+        </property>
+        <property name="placeholderText">
+         <string>1-65535</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="0">
+       <widget class="QLabel" name="labelStatus">
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 0);</string>
+        </property>
+        <property name="text">
+         <string>当前状态：</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="1">
+       <widget class="QComboBox" name="comboStatus">
+        <property name="styleSheet">
+         <string notr="true">
+         QComboBox {
+             padding: 6px;
+             border: 1px solid #d0d0d0;
+             border-radius: 3px;
+         }
+         QComboBox::drop-down {
+             width: 20px;
+             border: none;
+         }
+         </string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="styleSheet">
+      <string notr="true">color: rgb(0, 0, 0);</string>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Orientation::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::StandardButton::Cancel|QDialogButtonBox::StandardButton::Ok</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

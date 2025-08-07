@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>UnitManageWindow</class>
- <widget class="QWidget" name="UnitManageWindow">
+ <class>InstructionManageWindow</class>
+ <widget class="QWidget" name="InstructionManageWindow">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>参试单位管理模块</string>
+   <string>无人平台控制站指令管理</string>
   </property>
   <property name="styleSheet">
    <string notr="true">
@@ -88,7 +88,7 @@
          </string>
         </property>
         <property name="text">
-         <string>新增单位</string>
+         <string>新增指令</string>
         </property>
         <property name="icon">
          <iconset>
@@ -170,6 +170,37 @@
        </spacer>
       </item>
       <item>
+       <widget class="QComboBox" name="comboProtocolFilter">
+        <property name="styleSheet">
+         <string notr="true">
+          QComboBox {
+              padding: 4px 8px;
+              border: 1px solid #d0d0d0;
+              border-radius: 4px;
+              min-width: 150px;
+              font-size: 13px;
+              padding: 4px 8px;
+              color: #333333;
+              background-color: white;
+          }
+          QComboBox::drop-down {
+              width: 20px;
+              border: none;
+          }
+          QComboBox QAbstractItemView {
+              background-color: white;
+              color: #333333;
+              selection-background-color: #3a6ea5;
+              selection-color: white;
+          }
+         </string>
+        </property>
+        <property name="placeholderText">
+         <string>选择协议</string>
+        </property>
+       </widget>
+      </item>
+      <item>
        <widget class="QLineEdit" name="lineSearch">
         <property name="minimumSize">
          <size>
@@ -199,7 +230,7 @@
          </string>
         </property>
         <property name="placeholderText">
-         <string>输入单位名称、联系人等关键词...</string>
+         <string>输入指令名称、编码等关键词...</string>
         </property>
        </widget>
       </item>
@@ -237,7 +268,7 @@
     </widget>
    </item>
    <item>
-    <widget class="QTableWidget" name="tableUnits">
+    <widget class="QTableWidget" name="tableInstructions">
      <property name="styleSheet">
       <string notr="true">
        QTableWidget {
@@ -311,7 +342,7 @@
      </column>
      <column>
       <property name="text">
-       <string>名称</string>
+       <string>指令名称</string>
       </property>
       <property name="resizeMode">
        <enum>QHeaderView::Stretch</enum>
@@ -319,7 +350,7 @@
      </column>
      <column>
       <property name="text">
-       <string>地址</string>
+       <string>所属协议</string>
       </property>
       <property name="resizeMode">
        <enum>QHeaderView::Interactive</enum>
@@ -330,7 +361,7 @@
      </column>
      <column>
       <property name="text">
-       <string>联系人</string>
+       <string>指令编码</string>
       </property>
       <property name="resizeMode">
        <enum>QHeaderView::ResizeToContents</enum>
@@ -338,7 +369,7 @@
      </column>
      <column>
       <property name="text">
-       <string>电话</string>
+       <string>指令类型</string>
       </property>
       <property name="resizeMode">
        <enum>QHeaderView::ResizeToContents</enum>
@@ -346,7 +377,7 @@
      </column>
      <column>
       <property name="text">
-       <string>单位类型</string>
+       <string>更新时间</string>
       </property>
       <property name="resizeMode">
        <enum>QHeaderView::ResizeToContents</enum>
@@ -384,10 +415,10 @@
        <widget class="QLabel" name="labelPageInfo">
         <property name="styleSheet">
          <string notr="true">
-         color: #333333;  /* 改为更深的颜色 */
+         color: #333333;
          font-size: 13px;
          font-weight: 500;
-         background-color: transparent;  /* 确保背景透明 */
+         background-color: transparent;
          </string>
         </property>
         <property name="text">
@@ -477,18 +508,18 @@
               min-width: 60px;
               font-size: 12px;
               padding: 4px 8px;
-              color: #333333;  /* 添加字体颜色 */
-              background-color: white;  /* 确保背景是白色 */
+              color: #333333;
+              background-color: white;
           }
           QComboBox::drop-down {
               width: 20px;
               border: none;
           }
           QComboBox QAbstractItemView {
-              background-color: white;  /* 下拉菜单背景 */
-              color: #333333;  /* 下拉菜单文字颜色 */
-              selection-background-color: #3a6ea5;  /* 选中项背景 */
-              selection-color: white;  /* 选中项文字颜色 */
+              background-color: white;
+              color: #333333;
+              selection-background-color: #3a6ea5;
+              selection-color: white;
           }
          </string>
         </property>
@@ -572,9 +603,9 @@
               border: none;
           }
           QComboBox QAbstractItemView {
-              color: black;  /* 下拉选项字体黑色 */
-              background-color: white;  /* 下拉选项背景白色 */
-                      }
+              color: black;
+              background-color: white;
+          }
          </string>
         </property>
         <item>

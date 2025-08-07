@@ -76,83 +76,10 @@ UnitManageWindow::~UnitManageWindow()
 
 void UnitManageWindow::initUI()
 {
-    QString buttonStyle = R"(
-        QPushButton {
-            background-color: #3a6ea5;
-            color: white;
-            border: none;
-            padding: 8px 16px;
-            border-radius: 4px;
-            font-size: 13px;
-            min-width: 80px;
-        }
-        QPushButton:hover {
-            background-color: #4a90e2;
-        }
-        QPushButton:pressed {
-            background-color: #2a5685;
-        }
-        QPushButton:disabled {
-            background-color: #cccccc;
-        }
-    )";
-
-    ui->btnAdd->setStyleSheet(buttonStyle);
-    ui->btnEdit->setStyleSheet(buttonStyle);
-    ui->btnDelete->setStyleSheet(buttonStyle);
-    ui->btnSearch->setStyleSheet(buttonStyle);
-
-    ui->lineSearch->setStyleSheet(R"(
-        QLineEdit {
-            padding: 8px 12px;
-            border: 1px solid #d0d0d0;
-            border-radius: 4px;
-            font-size: 13px;
-            min-width: 250px;
-            background-color: white;
-            color: #333333;
-        }
-        QLineEdit:focus {
-            border: 1px solid #4a90e2;
-            box-shadow: 0 0 0 2px rgba(74,144,226,0.2);
-        }
-    )");
-
     QStringList headers;
     headers << "" << "名称" << "地址" << "联系人" << "电话" << "类型";
     ui->tableUnits->setColumnCount(headers.size());
     ui->tableUnits->setHorizontalHeaderLabels(headers);
-
-    ui->tableUnits->setStyleSheet(R"(
-        QTableWidget {
-            gridline-color: #e0e0e0;
-            font-size: 13px;
-            background-color: white;
-            alternate-background-color: #f8f9fa;
-            border: 1px solid #e0e0e0;
-            border-radius: 4px;
-            outline: 0;
-        }
-        QTableWidget::item {
-            padding: 8px;
-            border-bottom: 1px solid #f0f0f0;
-            color: #333333;
-        }
-        QTableWidget::item:hover {
-            background-color: #f0f7ff;
-        }
-        QHeaderView::section {
-            background-color: #3a6ea5;
-            color: white;
-            padding: 8px;
-            border: none;
-            font-weight: 500;
-        }
-        QHeaderView {
-            border-top-left-radius: 4px;
-            border-top-right-radius: 4px;
-        }
-    )");
 
     auto header = ui->tableUnits->horizontalHeader();
     header->setSectionResizeMode(0, QHeaderView::Fixed);
@@ -170,36 +97,9 @@ void UnitManageWindow::initUI()
 
 void UnitManageWindow::initPagination()
 {
-    QString paginationStyle = R"(
-        QPushButton {
-            min-width: 60px;
-            padding: 4px 8px;
-            background-color: #f0f0f0;
-            border: 1px solid #d0d0d0;
-            border-radius: 3px;
-        }
-        QPushButton:hover {
-            background-color: #e0e0e0;
-        }
-        QPushButton:pressed {
-            background-color: #d0d0d0;
-        }
-        QComboBox {
-            padding: 4px;
-            border: 1px solid #d0d0d0;
-            border-radius: 3px;
-            min-width: 60px;
-        }
-        QLabel {
-            color: #666666;
-        }
-    )";
-
-    ui->paginationWidget->setStyleSheet(paginationStyle);
-    ui->comboPageSize->addItems({"10", "20", "50", "100"});
     ui->comboPageSize->setCurrentIndex(0);
     ui->comboPage->clear();
-    ui->comboPage->addItem("1");
+    ui->comboPage->addItem("第1页");
 }
 
 void UnitManageWindow::setupConnections()
@@ -248,7 +148,7 @@ bool UnitManageWindow::addUnit(const QStringList &unitData)
                   "(unit_name, contact_person, contact_phone, unit_type, address, "
                   "create_time, update_time, is_delete) "
                   "VALUES (:name, :contact, :phone, :type, :address, "
-                  "NOW(), NOW(), 0)";  // 明确设置 is_delete = 0
+                  "NOW(), NOW(), 0)";
 
     QVariantMap params;
     params["name"] = unitData[0];
@@ -345,7 +245,7 @@ void UnitManageWindow::updatePagination()
     ui->comboPage->blockSignals(true);
     ui->comboPage->clear();
     for (int i = 1; i <= totalPages; ++i) {
-        ui->comboPage->addItem(QString::number(i));
+        ui->comboPage->addItem(QString("第%1页").arg(i));
     }
     ui->comboPage->setCurrentIndex(currentPage - 1);
     ui->comboPage->blockSignals(false);
@@ -359,65 +259,50 @@ void UnitManageWindow::updatePagination()
     ui->btnLast->setEnabled(currentPage < totalPages);
 }
 
-
 void UnitManageWindow::updateTable()
 {
-    // 清空表格前先断开所有信号连接
     ui->tableUnits->blockSignals(true);
     ui->tableUnits->clearContents();
     ui->tableUnits->setRowCount(0);
     ui->tableUnits->blockSignals(false);
 
-    // 获取最新数据
     QVector<QStringList> units = getAllUnits();
-
-    // 设置行数
     ui->tableUnits->setRowCount(units.size());
 
     for (int i = 0; i < units.size(); ++i) {
         const QStringList &unit = units[i];
 
-        // 复选框列
         QTableWidgetItem *checkItem = new QTableWidgetItem();
         checkItem->setFlags(Qt::ItemIsUserCheckable | Qt::ItemIsEnabled);
         checkItem->setCheckState(Qt::Unchecked);
         ui->tableUnits->setItem(i, 0, checkItem);
 
-        // 名称列（包含ID）
         QTableWidgetItem *nameItem = new QTableWidgetItem(unit[1]);
         nameItem->setData(Qt::UserRole, unit[0].toInt());
         nameItem->setTextAlignment(Qt::AlignCenter);
         ui->tableUnits->setItem(i, 1, nameItem);
 
-        // 地址列
         QTableWidgetItem *addressItem = new QTableWidgetItem(unit[2]);
         addressItem->setTextAlignment(Qt::AlignCenter);
         ui->tableUnits->setItem(i, 2, addressItem);
 
-        // 联系人列
         QTableWidgetItem *contactItem = new QTableWidgetItem(unit[3]);
         contactItem->setTextAlignment(Qt::AlignCenter);
         ui->tableUnits->setItem(i, 3, contactItem);
 
-        // 电话列
         QTableWidgetItem *phoneItem = new QTableWidgetItem(unit[4]);
         phoneItem->setTextAlignment(Qt::AlignCenter);
         ui->tableUnits->setItem(i, 4, phoneItem);
 
-        // 类型列
         QTableWidgetItem *typeItem = new QTableWidgetItem(unit[5]);
         typeItem->setTextAlignment(Qt::AlignCenter);
         ui->tableUnits->setItem(i, 5, typeItem);
     }
 
-    // 更新分页信息
     updatePagination();
     emit statusMessageRequested(QString("共 %1 条记录").arg(units.size()));
-
-    // 确保UI刷新
     qApp->processEvents();
 }
-
 
 void UnitManageWindow::updateTableWithResults(const QVector<QStringList> &results)
 {
@@ -468,7 +353,6 @@ QList<int> UnitManageWindow::getSelectedRows() const
     return selectedRows;
 }
 
-
 void UnitManageWindow::onAdd()
 {
     UnitDialog dialog(this, UnitDialog::NewUnit);
@@ -480,7 +364,6 @@ void UnitManageWindow::onAdd()
             if (addUnit(unitData.toStringList())) {
                 DBUtil::instance()->commitTransaction();
 
-                // 验证插入的数据
                 QVariantMap verify = DBUtil::instance()->query(
                                                            "SELECT unit_id, is_delete FROM participate_unit ORDER BY unit_id DESC LIMIT 1"
                                                            ).first();
@@ -488,9 +371,7 @@ void UnitManageWindow::onAdd()
                 qDebug() << "Newly added unit - ID:" << verify["unit_id"]
                          << "is_delete:" << verify["is_delete"];
 
-                // 刷新表格
                 updateTable();
-
                 emit statusMessageRequested("新增单位成功", 3000);
             } else {
                 DBUtil::instance()->rollbackTransaction();
@@ -500,19 +381,21 @@ void UnitManageWindow::onAdd()
     }
 }
 
-
 void UnitManageWindow::onEdit()
 {
     QList<int> selectedRows = getSelectedRows();
     if (selectedRows.size() != 1) {
-        QMessageBox::warning(this, "警告", "请勾选一条记录进行编辑");
+        QMessageBox::warning(
+            this,
+            "警告",
+            "<span style='color: black;'>请勾选一条记录进行编辑</span>"
+            );
         return;
     }
 
     int row = selectedRows.first();
     int unitId = ui->tableUnits->item(row, 1)->data(Qt::UserRole).toInt();
 
-    // 准备当前数据
     UnitDialog::UnitData currentData;
     currentData.name = ui->tableUnits->item(row, 1)->text();
     currentData.address = ui->tableUnits->item(row, 2)->text();
@@ -532,14 +415,11 @@ void UnitManageWindow::onEdit()
     }
 }
 
-
-
-
 void UnitManageWindow::onDelete()
 {
     QList<int> selectedRows = getSelectedRows();
     if(selectedRows.isEmpty()) {
-        QMessageBox::warning(this, "警告", "请勾选要删除的记录");
+        QMessageBox::warning(this, "警告", "<span style='color: black;'>请勾选要删除的记录</span>");
         return;
     }
 
@@ -580,6 +460,7 @@ void UnitManageWindow::onPageChanged(int index)
 {
     currentPage = index + 1;
     updateTable();
+    ui->comboPage->setCurrentText(QString("第%1页").arg(currentPage));
 }
 
 void UnitManageWindow::onPageSizeChanged(int index)

@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>InstructionDialog</class>
+ <widget class="QDialog" name="InstructionDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>500</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>指令编辑</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+    QDialog {
+        background-color: #f5f7fa;
+        font-family: "Microsoft YaHei", "Segoe UI", sans-serif;
+        color: black; /* 全局字体颜色设置为黑色 */
+    }
+    QGroupBox {
+        border: 1px solid #d0d0d0;
+        border-radius: 4px;
+        margin-top: 10px;
+        padding-top: 15px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        background-color: white;
+        color: black; /* 分组框标题字体颜色 */
+    }
+    QLabel {
+        color: black; /* 所有标签字体颜色 */
+    }
+   </string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="spacing">
+    <number>10</number>
+   </property>
+   <property name="leftMargin">
+    <number>12</number>
+   </property>
+   <property name="topMargin">
+    <number>12</number>
+   </property>
+   <property name="rightMargin">
+    <number>12</number>
+   </property>
+   <property name="bottomMargin">
+    <number>12</number>
+   </property>
+   <item>
+    <widget class="QGroupBox" name="groupBasic">
+     <property name="title">
+      <string>基本信息</string>
+     </property>
+     <layout class="QFormLayout" name="formLayout">
+      <property name="labelAlignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="formAlignment">
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+      </property>
+      <item row="0" column="0">
+       <widget class="QLabel" name="labelName">
+        <property name="text">
+         <string>指令名称：</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="editName">
+        <property name="styleSheet">
+         <string notr="true">
+          QLineEdit {
+              padding: 6px 10px;
+              border: 1px solid #d0d0d0;
+              border-radius: 4px;
+              font-size: 13px;
+              background-color: white;
+              color: black; /* 输入框文字颜色 */
+          }
+          QLineEdit:focus {
+              border: 1px solid #4a90e2;
+              box-shadow: 0 0 0 2px rgba(74,144,226,0.2);
+          }
+         </string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="labelProtocol">
+        <property name="text">
+         <string>所属协议：</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QComboBox" name="comboProtocol">
+        <property name="styleSheet">
+         <string notr="true">
+          QComboBox {
+              padding: 6px 10px;
+              border: 1px solid #d0d0d0;
+              border-radius: 4px;
+              font-size: 13px;
+              background-color: white;
+              color: black; /* 下拉框文字颜色 */
+          }
+          QComboBox::drop-down {
+              width: 20px;
+              border: none;
+          }
+          QComboBox QAbstractItemView {
+              color: black; /* 下拉选项文字颜色 */
+              background-color: white;
+          }
+         </string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="labelCode">
+        <property name="text">
+         <string>指令编码：</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLineEdit" name="editCode">
+        <property name="styleSheet">
+         <string notr="true">
+          QLineEdit {
+              padding: 6px 10px;
+              border: 1px solid #d0d0d0;
+              border-radius: 4px;
+              font-size: 13px;
+              background-color: white;
+              color: black;
+          }
+          QLineEdit:focus {
+              border: 1px solid #4a90e2;
+              box-shadow: 0 0 0 2px rgba(74,144,226,0.2);
+          }
+         </string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="labelType">
+        <property name="text">
+         <string>指令类型：</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QComboBox" name="comboType">
+        <property name="styleSheet">
+         <string notr="true">
+          QComboBox {
+              padding: 6px 10px;
+              border: 1px solid #d0d0d0;
+              border-radius: 4px;
+              font-size: 13px;
+              background-color: white;
+              color: black;
+          }
+          QComboBox::drop-down {
+              width: 20px;
+              border: none;
+          }
+          QComboBox QAbstractItemView {
+              color: black;
+              background-color: white;
+          }
+         </string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupContent">
+     <property name="title">
+      <string>指令内容 (JSON格式)</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <property name="spacing">
+       <number>6</number>
+      </property>
+      <property name="leftMargin">
+       <number>6</number>
+      </property>
+      <property name="topMargin">
+       <number>6</number>
+      </property>
+      <property name="rightMargin">
+       <number>6</number>
+      </property>
+      <property name="bottomMargin">
+       <number>6</number>
+      </property>
+      <item>
+       <widget class="QPlainTextEdit" name="textContent">
+        <property name="styleSheet">
+         <string notr="true">
+          QPlainTextEdit {
+              font-family: "Consolas", "Courier New", monospace;
+              font-size: 12px;
+              border: 1px solid #d0d0d0;
+              border-radius: 4px;
+              padding: 4px;
+              background-color: white;
+              color: black; /* JSON文本颜色 */
+          }
+          QPlainTextEdit:focus {
+              border: 1px solid #4a90e2;
+              box-shadow: 0 0 0 2px rgba(74,144,226,0.2);
+          }
+         </string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="labelJsonError">
+        <property name="styleSheet">
+         <string notr="true">
+          color: #e74c3c; /* 错误信息保持红色 */
+          font-size: 12px;
+         </string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="styleSheet">
+      <string notr="true">
+       QPushButton {
+           min-width: 80px;
+           padding: 6px 12px;
+           color: black; /* 按钮文字颜色 */
+       }
+      </string>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+     <property name="centerButtons">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>InstructionDialog</receiver>
+   <slot>accept()</slot>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>InstructionDialog</receiver>
+   <slot>reject()</slot>
+  </connection>
+ </connections>
+</ui>

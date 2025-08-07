@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>UnitManageWindow</class>
- <widget class="QWidget" name="UnitManageWindow">
+ <class>ControlStationManageWindow</class>
+ <widget class="QWidget" name="ControlStationManageWindow">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1000</width>
+    <width>1200</width>
     <height>650</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>参试单位管理模块</string>
+   <string>无人平台控制站管理</string>
   </property>
   <property name="styleSheet">
    <string notr="true">
@@ -88,7 +88,7 @@
          </string>
         </property>
         <property name="text">
-         <string>新增单位</string>
+         <string>新增控制站</string>
         </property>
         <property name="icon">
          <iconset>
@@ -199,7 +199,7 @@
          </string>
         </property>
         <property name="placeholderText">
-         <string>输入单位名称、联系人等关键词...</string>
+         <string>输入控制站名称、IP等关键词...</string>
         </property>
        </widget>
       </item>
@@ -237,7 +237,7 @@
     </widget>
    </item>
    <item>
-    <widget class="QTableWidget" name="tableUnits">
+    <widget class="QTableWidget" name="tableStations">
      <property name="styleSheet">
       <string notr="true">
        QTableWidget {
@@ -293,7 +293,7 @@
       <number>0</number>
      </property>
      <property name="columnCount">
-      <number>6</number>
+      <number>8</number>
      </property>
      <column>
       <property name="text">
@@ -311,7 +311,7 @@
      </column>
      <column>
       <property name="text">
-       <string>名称</string>
+       <string>控制站名称</string>
       </property>
       <property name="resizeMode">
        <enum>QHeaderView::Stretch</enum>
@@ -319,18 +319,15 @@
      </column>
      <column>
       <property name="text">
-       <string>地址</string>
+       <string>所属单位</string>
       </property>
       <property name="resizeMode">
        <enum>QHeaderView::Interactive</enum>
       </property>
-      <property name="minimumWidth">
-       <number>150</number>
-      </property>
      </column>
      <column>
       <property name="text">
-       <string>联系人</string>
+       <string>控制站类型</string>
       </property>
       <property name="resizeMode">
        <enum>QHeaderView::ResizeToContents</enum>
@@ -338,7 +335,7 @@
      </column>
      <column>
       <property name="text">
-       <string>电话</string>
+       <string>IP地址</string>
       </property>
       <property name="resizeMode">
        <enum>QHeaderView::ResizeToContents</enum>
@@ -346,7 +343,23 @@
      </column>
      <column>
       <property name="text">
-       <string>单位类型</string>
+       <string>通信端口</string>
+      </property>
+      <property name="resizeMode">
+       <enum>QHeaderView::ResizeToContents</enum>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>状态</string>
+      </property>
+      <property name="resizeMode">
+       <enum>QHeaderView::ResizeToContents</enum>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>更新时间</string>
       </property>
       <property name="resizeMode">
        <enum>QHeaderView::ResizeToContents</enum>
@@ -384,10 +397,10 @@
        <widget class="QLabel" name="labelPageInfo">
         <property name="styleSheet">
          <string notr="true">
-         color: #333333;  /* 改为更深的颜色 */
+         color: #333333;
          font-size: 13px;
          font-weight: 500;
-         background-color: transparent;  /* 确保背景透明 */
+         background-color: transparent;
          </string>
         </property>
         <property name="text">
@@ -477,18 +490,18 @@
               min-width: 60px;
               font-size: 12px;
               padding: 4px 8px;
-              color: #333333;  /* 添加字体颜色 */
-              background-color: white;  /* 确保背景是白色 */
+              color: #333333;
+              background-color: white;
           }
           QComboBox::drop-down {
               width: 20px;
               border: none;
           }
           QComboBox QAbstractItemView {
-              background-color: white;  /* 下拉菜单背景 */
-              color: #333333;  /* 下拉菜单文字颜色 */
-              selection-background-color: #3a6ea5;  /* 选中项背景 */
-              selection-color: white;  /* 选中项文字颜色 */
+              background-color: white;
+              color: #333333;
+              selection-background-color: #3a6ea5;
+              selection-color: white;
           }
          </string>
         </property>
@@ -572,9 +585,9 @@
               border: none;
           }
           QComboBox QAbstractItemView {
-              color: black;  /* 下拉选项字体黑色 */
-              background-color: white;  /* 下拉选项背景白色 */
-                      }
+              color: black;
+              background-color: white;
+          }
          </string>
         </property>
         <item>

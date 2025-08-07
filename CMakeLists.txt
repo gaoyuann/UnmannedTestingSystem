@@ -23,6 +23,8 @@ set(PROJECT_SOURCES
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     find_package(Qt6 REQUIRED COMPONENTS Core)
+find_package(Qt6 REQUIRED COMPONENTS Widgets)
+find_package(Qt6 REQUIRED COMPONENTS Widgets)
 
     qt_add_executable(UnmannedTestingSystem
         MANUAL_FINALIZATION
@@ -31,6 +33,15 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         UnitDialog.h UnitDialog.cpp UnitDialog.ui
         DBUtil.h DBUtil.cpp
         config.ini
+        ControlStationManageWindow.h ControlStationManageWindow.cpp ControlStationManageWindow.ui
+        ControlStationDialog.h ControlStationDialog.cpp
+        ControlStationDialog.h ControlStationDialog.cpp ControlStationDialog.ui
+        ProtocolManageWindow.h ProtocolManageWindow.cpp ProtocolManageWindow.ui
+        ProtocolDialog.h ProtocolDialog.cpp
+        ProtocolDialog.h ProtocolDialog.cpp ProtocolDialog.ui
+        MessageFormatDialog.h MessageFormatDialog.cpp MessageFormatDialog.ui
+        InstructionManageWindow.h InstructionManageWindow.cpp InstructionManageWindow.ui
+        InstructionDialog.h InstructionDialog.cpp InstructionDialog.ui
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET UnmannedTestingSystem APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
@@ -56,6 +67,8 @@ target_link_libraries(UnmannedTestingSystem PRIVATE
     Qt${QT_VERSION_MAJOR}::Widgets
     Qt${QT_VERSION_MAJOR}::Sql
 )
+target_link_libraries(UnmannedTestingSystem PRIVATE Qt6::Widgets)
+target_link_libraries(UnmannedTestingSystem PRIVATE Qt6::Widgets)
 
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.

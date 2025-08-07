@@ -1,24 +1,28 @@
 #include "MainWindow.h"
 #include "DBUtil.h"
+
 #include <QApplication>
 #include <QMessageBox>
 #include <QFileInfo>
 #include <QDebug>
 #include <QDir>
+#include <QStyleFactory>
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
 
-    // 1. 设置相对配置文件路径
-    // 获取当前源文件的绝对路径（如 D:/study/UnmannedTestingSystem/main.cpp）
-    QString currentSourceFile = __FILE__;
+    // 设置全局样式，确保 QMessageBox 文本为黑色
+    a.setStyleSheet(
+        "QMessageBox { background-color: white; }"
+        "QMessageBox QLabel { color: black; }"
+        "QMessageBox QPushButton { color: black; }"
+        );
 
-    // 获取所在目录（D:/study/UnmannedTestingSystem/）
+    // 1. 设置相对配置文件路径
+    QString currentSourceFile = __FILE__;
     QFileInfo fileInfo(currentSourceFile);
     QString sourceDir = fileInfo.absolutePath();
-
-    // 计算 config.ini 路径
     QString configPath = QDir::cleanPath(sourceDir + "/config.ini");
 
     qDebug() << "配置文件路径:" << configPath;
@@ -28,11 +32,12 @@ int main(int argc, char *argv[])
         QMessageBox::critical(
             nullptr,
             "配置文件错误",
-            QString("未找到配置文件！\n\n"
-                    "路径: %1\n\n"
-                    "请确保：\n"
-                    "1. 配置文件存在于指定位置\n"
-                    "2. 程序有读取权限")
+            QString("<span style='color: black;'>"
+                    "未找到配置文件！<br><br>"
+                    "路径: <b>%1</b><br><br>"
+                    "请确保：<br>"
+                    "1. 配置文件存在于指定位置<br>"
+                    "2. 程序有读取权限</span>")
                 .arg(configPath)
             );
         return -1;
@@ -41,9 +46,20 @@ int main(int argc, char *argv[])
     // 2. 初始化数据库
     DBUtil* dbUtil = DBUtil::instance();
     if (!dbUtil->initFromConfig(configPath)) {
-        // 调试输出
         qDebug() << "可用数据库驱动:" << QSqlDatabase::drivers();
         qDebug() << "最后执行的SQL:" << dbUtil->lastExecutedQuery();
+
+        QMessageBox::critical(
+            nullptr,
+            "数据库初始化失败",
+            QString("<span style='color: black;'>"
+                    "数据库连接失败！<br><br>"
+                    "错误信息: <b>%1</b><br><br>"
+                    "请检查：<br>"
+                    "1. 数据库服务是否运行<br>"
+                    "2. 配置文件的用户名/密码是否正确</span>")
+                .arg(dbUtil->lastError())
+            );
         return -1;
     }
 
@@ -52,9 +68,10 @@ int main(int argc, char *argv[])
         QMessageBox::critical(
             nullptr,
             "连接测试失败",
-            QString("数据库连接不稳定！\n"
-                    "最后错误: %1\n\n"
-                    "请检查网络连接或数据库状态")
+            QString("<span style='color: black;'>"
+                    "数据库连接不稳定！<br>"
+                    "最后错误: <b>%1</b><br><br>"
+                    "请检查网络连接或数据库状态</span>")
                 .arg(dbUtil->lastError())
             );
         return -1;
