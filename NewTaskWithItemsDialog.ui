@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>NewTaskWithItemsDialog</class>
+ <widget class="QDialog" name="NewTaskWithItemsDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>642</width>
+    <height>666</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>新增测试任务（含测试项目）</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <!-- 任务基本信息 -->
+   <item>
+    <widget class="QGroupBox" name="groupBasic">
+     <property name="title">
+      <string>任务基本信息</string>
+     </property>
+     <layout class="QFormLayout" name="formLayoutBasic">
+      <item row="0" column="0">
+       <widget class="QLabel" name="labelTaskName">
+        <property name="text">
+         <string>任务名称:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="editTaskName"/>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="labelUnit">
+        <property name="text">
+         <string>参试单位:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QComboBox" name="comboUnit"/>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="labelStation">
+        <property name="text">
+         <string>控制站:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QComboBox" name="comboStation"/>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="labelProtocol">
+        <property name="text">
+         <string>测试协议:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QComboBox" name="comboProtocol"/>
+      </item>
+     </layout>
+    </widget>
+   </item>
+
+   <!-- 测试项目 -->
+   <item>
+    <widget class="QGroupBox" name="groupTestItems">
+     <property name="title">
+      <string>测试项目（可新增多行）</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayoutItems">
+      <item>
+       <widget class="QTableWidget" name="tableTestItems"/>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayoutItemButtons">
+        <item>
+         <widget class="QPushButton" name="btnAddItem">
+          <property name="text">
+           <string>新增测试项</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnRemoveItem">
+          <property name="text">
+           <string>删除选中项</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+
+   <!-- 错误提示（参考UnitDialog的labelError） -->
+   <item>
+    <widget class="QLabel" name="labelError">
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignmentFlag::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+
+   <!-- 底部按钮（参考UnitDialog的buttonBox） -->
+   <item>
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="orientation">
+      <enum>Qt::Orientation::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::StandardButton::Cancel|QDialogButtonBox::StandardButton::Ok</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>NewTaskWithItemsDialog</receiver>
+   <slot>on_buttonBox_accepted()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>300</x>
+     <y>600</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>300</x>
+     <y>600</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>NewTaskWithItemsDialog</receiver>
+   <slot>on_buttonBox_rejected()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>400</x>
+     <y>600</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>400</x>
+     <y>600</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnAddItem</sender>
+   <signal>clicked()</signal>
+   <receiver>NewTaskWithItemsDialog</receiver>
+   <slot>on_btnAddItem_clicked()</slot>
+  </connection>
+  <connection>
+   <sender>btnRemoveItem</sender>
+   <signal>clicked()</signal>
+   <receiver>NewTaskWithItemsDialog</receiver>
+   <slot>on_btnRemoveItem_clicked()</slot>
+  </connection>
+ </connections>
+ <slots>
+  <slot>on_btnAddItem_clicked()</slot>
+  <slot>on_btnRemoveItem_clicked()</slot>
+  <slot>on_buttonBox_accepted()</slot>
+  <slot>on_buttonBox_rejected()</slot>
+ </slots>
+</ui>

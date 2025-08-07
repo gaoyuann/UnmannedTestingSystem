@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TestManageWindow</class>
+ <widget class="QWidget" name="TestManageWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1016</width>
+    <height>650</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>测试管理模块</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: transparent;</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="spacing">
+    <number>8</number>
+   </property>
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <layout class="QHBoxLayout" name="buttonLayout">
+     <property name="spacing">
+      <number>10</number>
+     </property>
+     <property name="leftMargin">
+      <number>12</number>
+     </property>
+     <property name="topMargin">
+      <number>12</number>
+     </property>
+     <property name="rightMargin">
+      <number>12</number>
+     </property>
+     <property name="bottomMargin">
+      <number>12</number>
+     </property>
+     <item>
+      <widget class="QPushButton" name="btnAddTask">
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    background-color: #3a6ea5;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 13px;
+    min-width: 80px;
+}
+QPushButton:hover {
+    background-color: #4a90e2;
+}
+QPushButton:pressed {
+    background-color: #2a5685;
+}</string>
+       </property>
+       <property name="text">
+        <string>新增任务</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>:/icons/add.png</normaloff>:/icons/add.png</iconset>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnEditTask">
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    background-color: #3a6ea5;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 13px;
+    min-width: 80px;
+}
+QPushButton:hover {
+    background-color: #4a90e2;
+}
+QPushButton:pressed {
+    background-color: #2a5685;
+}</string>
+       </property>
+       <property name="text">
+        <string>编辑任务</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>:/icons/edit.png</normaloff>:/icons/edit.png</iconset>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnDeleteTask">
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 13px;
+    min-width: 80px;
+}
+QPushButton:hover {
+    background-color: #c0392b;
+}
+QPushButton:pressed {
+    background-color: #992d22;
+}</string>
+       </property>
+       <property name="text">
+        <string>删除任务</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>:/icons/delete.png</normaloff>:/icons/delete.png</iconset>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnExecuteTask">
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    background-color: #f39c12;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 13px;
+    min-width: 80px;
+}
+QPushButton:hover {
+    background-color: #e67e22;
+}
+QPushButton:pressed {
+    background-color: #d35400;
+}</string>
+       </property>
+       <property name="text">
+        <string>执行任务</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>:/icons/run.png</normaloff>:/icons/run.png</iconset>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Orientation::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="lineSearch">
+       <property name="minimumSize">
+        <size>
+         <width>250</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLineEdit {
+    padding: 8px 12px;
+    border: 1px solid #d0d0d0;
+    border-radius: 4px;
+    font-size: 13px;
+    background-color: white;
+}
+QLineEdit:focus {
+    border: 1px solid #4a90e2;
+    box-shadow: 0 0 0 2px rgba(74,144,226,0.2);
+}</string>
+       </property>
+       <property name="placeholderText">
+        <string>输入任务名称、参试单位等关键词...</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnSearch">
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 13px;
+    min-width: 80px;
+}
+QPushButton:hover {
+    background-color: #2ecc71;
+}
+QPushButton:pressed {
+    background-color: #219955;
+}</string>
+       </property>
+       <property name="text">
+        <string>搜索</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>:/icons/search.png</normaloff>:/icons/search.png</iconset>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QTableWidget" name="tableTasks">
+     <property name="styleSheet">
+      <string notr="true">QTableWidget {
+    font-size: 13px;
+    background-color: white;
+    alternate-background-color: #f8f9fa;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    gridline-color: #d0d0d0;
+}
+QTableWidget::item {
+    padding: 8px;
+    border-right: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+    color: #333333;
+}
+QTableWidget::item:hover {
+    background-color: #f0f7ff;
+}
+QHeaderView::section {
+    background-color: #3a6ea5;
+    color: white;
+    padding: 8px;
+    border-right: 1px solid #2a5685;
+    border-bottom: none;
+    font-weight: 500;
+}
+QHeaderView {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}</string>
+     </property>
+     <property name="sizeAdjustPolicy">
+      <enum>QAbstractScrollArea::SizeAdjustPolicy::AdjustToContents</enum>
+     </property>
+     <property name="alternatingRowColors">
+      <bool>true</bool>
+     </property>
+     <property name="selectionMode">
+      <enum>QAbstractItemView::SelectionMode::SingleSelection</enum>
+     </property>
+     <property name="selectionBehavior">
+      <enum>QAbstractItemView::SelectionBehavior::SelectRows</enum>
+     </property>
+     <property name="showGrid">
+      <bool>false</bool>
+     </property>
+     <property name="sortingEnabled">
+      <bool>true</bool>
+     </property>
+     <property name="rowCount">
+      <number>0</number>
+     </property>
+     <property name="columnCount">
+      <number>8</number>
+     </property>
+     <column>
+      <property name="text">
+       <string>任务ID</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>任务名称</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>参试单位</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>控制站</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>测试协议</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>开始时间</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>状态</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>操作</string>
+      </property>
+     </column>
+    </widget>
+   </item>
+   <item>
+    <widget class="QWidget" name="paginationWidget" native="true">
+     <property name="styleSheet">
+      <string notr="true">background-color: transparent;</string>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <property name="spacing">
+       <number>8</number>
+      </property>
+      <property name="leftMargin">
+       <number>12</number>
+      </property>
+      <property name="topMargin">
+       <number>6</number>
+      </property>
+      <property name="rightMargin">
+       <number>12</number>
+      </property>
+      <property name="bottomMargin">
+       <number>6</number>
+      </property>
+      <item>
+       <widget class="QLabel" name="labelPageInfo">
+        <property name="styleSheet">
+         <string notr="true">color: #666666;</string>
+        </property>
+        <property name="text">
+         <string>第 1 页 / 共 1 页 (10 条)</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Orientation::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnFirst">
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+        color: rgb(0, 0, 0);
+    min-width: 60px;
+    padding: 4px 8px;
+    background-color: #f0f0f0;
+    border: 1px solid #d0d0d0;
+    border-radius: 3px;
+}
+QPushButton:hover {
+    background-color: #e0e0e0;
+}
+QPushButton:pressed {
+    background-color: #d0d0d0;
+}</string>
+        </property>
+        <property name="text">
+         <string>首页</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>:/icons/first.png</normaloff>:/icons/first.png</iconset>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnPrev">
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+        color: rgb(0, 0, 0);
+    min-width: 60px;
+    padding: 4px 8px;
+    background-color: #f0f0f0;
+    border: 1px solid #d0d0d0;
+    border-radius: 3px;
+}
+QPushButton:hover {
+    background-color: #e0e0e0;
+}
+QPushButton:pressed {
+    background-color: #d0d0d0;
+}
+</string>
+        </property>
+        <property name="text">
+         <string>上一页</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>:/icons/prev.png</normaloff>:/icons/prev.png</iconset>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnNext">
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+        color: rgb(0, 0, 0);
+    min-width: 60px;
+    padding: 4px 8px;
+    background-color: #f0f0f0;
+    border: 1px solid #d0d0d0;
+    border-radius: 3px;
+}
+QPushButton:hover {
+    background-color: #e0e0e0;
+}
+QPushButton:pressed {
+    background-color: #d0d0d0;
+}</string>
+        </property>
+        <property name="text">
+         <string>下一页</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>:/icons/next.png</normaloff>:/icons/next.png</iconset>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnLast">
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+        color: rgb(0, 0, 0);
+    min-width: 60px;
+    padding: 4px 8px;
+    background-color: #f0f0f0;
+    border: 1px solid #d0d0d0;
+    border-radius: 3px;
+}
+QPushButton:hover {
+    background-color: #e0e0e0;
+}
+QPushButton:pressed {
+    background-color: #d0d0d0;
+}</string>
+        </property>
+        <property name="text">
+         <string>末页</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>:/icons/last.png</normaloff>:/icons/last.png</iconset>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
