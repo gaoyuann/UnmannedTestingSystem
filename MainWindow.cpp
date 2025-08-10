@@ -8,6 +8,9 @@
 #include "InstructionManageWindow.h"  // 新增指令管理窗口头文件
 #include "TestManageWindow.h"
 
+#include "UserManageWindow.h"
+
+
 #include <QStyle>
 #include <QList>
 #include <QPushButton>
@@ -21,7 +24,11 @@ MainWindow::MainWindow(QWidget *parent)
     testManageWindow(nullptr),
     stationManageWindow(nullptr),
     protocolManageWindow(nullptr),
-    instructionManageWindow(nullptr)  // 初始化指令管理窗口指针
+    instructionManageWindow(nullptr),
+    userManageWindow(nullptr)
+    , permissionManageWindow(nullptr)
+    , orgManageWindow(nullptr)
+    , dictManageWindow(nullptr)// 初始化指令管理窗口指针
 {
     ui->setupUi(this);
 
@@ -31,6 +38,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     // 设置信号槽连接
     setupConnections();
+    initSystemMenu();
 }
 
 MainWindow::~MainWindow()
@@ -41,6 +49,10 @@ MainWindow::~MainWindow()
     delete protocolManageWindow;
     delete instructionManageWindow;  // 安全删除指令管理窗口
     delete testManageWindow;
+    delete userManageWindow;
+    delete permissionManageWindow;
+    delete orgManageWindow;
+    delete dictManageWindow;
 }
 
 void MainWindow::setupConnections()
@@ -51,8 +63,12 @@ void MainWindow::setupConnections()
     connect(ui->btnCommands, &QPushButton::clicked, this, &MainWindow::onBtnCommandsClicked);
     connect(ui->btnTests, &QPushButton::clicked, this, &MainWindow::onbtnTestsclicked);
     connect(ui->btnAnalysis, &QPushButton::clicked, this, &MainWindow::onBtnAnalysisClicked);
-    connect(ui->btnSystem, &QPushButton::clicked, this, &MainWindow::onBtnSystemClicked);
+    connect(ui->btnSystem, &QPushButton::clicked, this, &MainWindow::on_btnSystem_clicked);
     connect(ui->btnLogout, &QPushButton::clicked, this, &MainWindow::onBtnLogoutClicked);
+    connect(ui->btnUserManage, &QPushButton::clicked, this, &MainWindow::on_btnUserManage_clicked);
+    connect(ui->btnPermissionManage, &QPushButton::clicked, this, &MainWindow::on_btnPermissionManage_clicked);
+    connect(ui->btnOrgManage, &QPushButton::clicked, this, &MainWindow::on_btnOrgManage_clicked);
+    connect(ui->btnDictManage, &QPushButton::clicked, this, &MainWindow::on_btnDictManage_clicked);
 }
 
 void MainWindow::setActiveButton(QPushButton *btn)
@@ -73,6 +89,13 @@ void MainWindow::resetAllButtons()
             btn->style()->polish(btn);
         }
     }
+}
+
+// 新增系统菜单初始化
+void MainWindow::initSystemMenu()
+{
+    // 默认隐藏系统管理子菜单
+    ui->systemSubLayout->parentWidget()->setVisible(false);
 }
 
 void MainWindow::onBtnUnitsClicked()
@@ -137,13 +160,56 @@ void MainWindow::onBtnAnalysisClicked()
     ui->stackedWidget->setCurrentWidget(ui->pageAnalysis);
 }
 
-void MainWindow::onBtnSystemClicked()
-{
-    setActiveButton(ui->btnSystem);
-    ui->stackedWidget->setCurrentWidget(ui->pageSystem);
-}
-
 void MainWindow::onBtnLogoutClicked()
 {
     close();
+}
+
+// 新增系统管理菜单槽函数
+void MainWindow::on_btnSystem_clicked()
+{
+    // 切换子菜单可见性
+    QWidget *subMenu = ui->systemSubLayout->parentWidget();
+    subMenu->setVisible(!subMenu->isVisible());
+
+    // 激活系统管理主按钮
+    setActiveButton(ui->btnSystem);
+
+    // 切换到系统管理主页面
+    ui->stackedWidget->setCurrentWidget(ui->pageSystem);
+}
+
+void MainWindow::on_btnUserManage_clicked()
+{
+    setActiveButton(ui->btnUserManage);
+    if (!userManageWindow) {
+        userManageWindow = new UserManageWindow(this);
+        ui->stackedWidget->addWidget(userManageWindow);
+    }
+    ui->stackedWidget->setCurrentWidget(userManageWindow);
+}
+
+void MainWindow::on_btnPermissionManage_clicked()
+{
+    setActiveButton(ui->btnAnalysis);
+    ui->stackedWidget->setCurrentWidget(ui->pageAnalysis);
+}
+
+void MainWindow::on_btnOrgManage_clicked()
+{
+    setActiveButton(ui->btnAnalysis);
+    ui->stackedWidget->setCurrentWidget(ui->pageAnalysis);
+}
+
+void MainWindow::on_btnDictManage_clicked()
+{
+    setActiveButton(ui->btnAnalysis);
+    ui->stackedWidget->setCurrentWidget(ui->pageAnalysis);
+}
+
+void MainWindow::onButtonClicked() {
+    // 手动指定要切换到的页面（例如第0页）
+    ui->stackedWidget->setCurrentIndex(0);
+    // 或通过Widget指针切换：
+    // ui->stackedWidget->setCurrentWidget(ui->page1);
 }
