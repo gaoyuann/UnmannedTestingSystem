@@ -1,0 +1,24 @@
+# ninja log v6
+369	9300	7763452411480322	CMakeFiles/UnmannedTestingSystem.dir/ProtocolManageWindow.cpp.obj	e933d121f915006f
+33	340	7763452408110310	UnmannedTestingSystem_autogen/timestamp	6830e015ad1ee3a
+33	340	7763452408110310	D:/project/UnmannedTestingSystem/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/UnmannedTestingSystem_autogen/mocs_compilation.cpp	6830e015ad1ee3a
+410	8284	7763452411890346	CMakeFiles/UnmannedTestingSystem.dir/NewTaskWithItemsDialog.cpp.obj	33fb6a515d59ecb9
+424	7243	7763452412030351	CMakeFiles/UnmannedTestingSystem.dir/UserManageWindow.cpp.obj	2d2fc3e3a3443477
+2177	11052	7763434584249243	CMakeFiles/UnmannedTestingSystem.dir/DBUtil.cpp.obj	33b62fbcbefa5b5f
+354	6894	7763452411330339	CMakeFiles/UnmannedTestingSystem.dir/UnitDialog.cpp.obj	c86dfc37df7fe805
+33	340	7763452408110310	UnmannedTestingSystem_autogen/mocs_compilation.cpp	6830e015ad1ee3a
+375	6895	7763452411540325	CMakeFiles/UnmannedTestingSystem.dir/ProtocolDialog.cpp.obj	2095834f4f0a1e50
+33	340	7763452408110310	D:/project/UnmannedTestingSystem/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/UnmannedTestingSystem_autogen/timestamp	6830e015ad1ee3a
+396	8735	7763452411740331	CMakeFiles/UnmannedTestingSystem.dir/InstructionDialog.cpp.obj	839c6a995527aa9d
+364	7917	7763452411430364	CMakeFiles/UnmannedTestingSystem.dir/ControlStationDialog.cpp.obj	b630f7b56473cfcf
+382	8370	7763452411600347	CMakeFiles/UnmannedTestingSystem.dir/MessageFormatDialog.cpp.obj	d10ffb9ba6014ccc
+591	7552	7763441816345999	CMakeFiles/UnmannedTestingSystem.dir/main.cpp.obj	15a8bd45c8be4b1b
+346	8734	7763452411240318	CMakeFiles/UnmannedTestingSystem.dir/MainWindow.cpp.obj	61958f7a5feac325
+341	9104	7763452411190315	CMakeFiles/UnmannedTestingSystem.dir/UnmannedTestingSystem_autogen/mocs_compilation.cpp.obj	2198205d2320ca69
+417	8813	7763452411960341	CMakeFiles/UnmannedTestingSystem.dir/TaskDetailWindow.cpp.obj	dff93613696d4f21
+359	8775	7763452411380338	CMakeFiles/UnmannedTestingSystem.dir/ControlStationManageWindow.cpp.obj	bac3daf50e21fc0a
+402	8368	7763452411810336	CMakeFiles/UnmannedTestingSystem.dir/TestManageWindow.cpp.obj	150bf2449f41cbe1
+389	9488	7763452411670332	CMakeFiles/UnmannedTestingSystem.dir/InstructionManageWindow.cpp.obj	3956c82d3252f838
+350	9105	7763452411290315	CMakeFiles/UnmannedTestingSystem.dir/UnitManageWindow.cpp.obj	20fb5b55b17b7a3c
+12537	15259	7763452533157645	UnmannedTestingSystem.exe	ddaf7bed5207a989
+431	12537	7763452412100354	CMakeFiles/UnmannedTestingSystem.dir/TestResultsAnalysisWindow.cpp.obj	75e75cba91f0ad2b

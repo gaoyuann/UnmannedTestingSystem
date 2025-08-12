@@ -1,0 +1,4 @@
+[2025-08-08 15:29:43] SQL准备失败: Lost connection to MySQL server during query QMYSQL: Unable to prepare statement
+SQL: SELECT t.*, pu.unit_name, cs.station_name, p.protocol_name FROM test_task t JOIN participate_unit pu ON t.unit_id = pu.unit_id JOIN control_station cs ON t.station_id = cs.station_id JOIN protocol p ON t.protocol_id = p.protocol_id WHERE t.task_id = :taskId
+[2025-08-08 16:42:28] 数据库连接失败: Lost connection to MySQL server at 'waiting for initial communication packet', system error: 10060 QMYSQL: Unable to connect
+[2025-08-11 20:43:21] 数据库连接失败: Lost connection to MySQL server at 'waiting for initial communication packet', system error: 10060 QMYSQL: Unable to connect

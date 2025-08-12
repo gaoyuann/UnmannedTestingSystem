@@ -25,6 +25,8 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     find_package(Qt6 REQUIRED COMPONENTS Core)
 find_package(Qt6 REQUIRED COMPONENTS Widgets)
 find_package(Qt6 REQUIRED COMPONENTS Widgets)
+# 找到 Qt Charts 组件
+find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets Sql Charts)
 
     qt_add_executable(UnmannedTestingSystem
         MANUAL_FINALIZATION
@@ -46,6 +48,11 @@ find_package(Qt6 REQUIRED COMPONENTS Widgets)
         NewTaskWithItemsDialog.h NewTaskWithItemsDialog.cpp NewTaskWithItemsDialog.ui
         TaskDetailWindow.h TaskDetailWindow.cpp TaskDetailWindow.ui
         UserManageWindow.h UserManageWindow.cpp UserManageWindow.ui
+        NewTaskWithItemsDialog.cpp
+        NewTaskWithItemsDialog.h
+        NewTaskWithItemsDialog.ui
+        UserManageWindow.cpp
+        TestResultsAnalysisWindow.h TestResultsAnalysisWindow.cpp TestResultsAnalysisWindow.ui
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET UnmannedTestingSystem APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
@@ -70,6 +77,7 @@ target_link_libraries(UnmannedTestingSystem PRIVATE Qt6::Core)
 target_link_libraries(UnmannedTestingSystem PRIVATE
     Qt${QT_VERSION_MAJOR}::Widgets
     Qt${QT_VERSION_MAJOR}::Sql
+    Qt${QT_VERSION_MAJOR}::Charts
 )
 target_link_libraries(UnmannedTestingSystem PRIVATE Qt6::Widgets)
 target_link_libraries(UnmannedTestingSystem PRIVATE Qt6::Widgets)

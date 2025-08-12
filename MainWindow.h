@@ -12,8 +12,9 @@ class MainWindow;
 class UnitManageWindow;
 class ControlStationManageWindow;
 class ProtocolManageWindow;
-class InstructionManageWindow;  // 新增指令管理窗口前置声明
+class InstructionManageWindow;
 class TestManageWindow;
+class TestResultsAnalysisWindow;  // 新增分析窗口前置声明
 
 class MainWindow : public QMainWindow
 {
@@ -27,7 +28,7 @@ private slots:
     void onBtnUnitsClicked();
     void onBtnStationsClicked();
     void onBtnProtocolsClicked();
-    void onBtnCommandsClicked();  // 修改为指令管理功能
+    void onBtnCommandsClicked();
     void onbtnTestsclicked();
     void onBtnAnalysisClicked();
     void onBtnSystemClicked();
@@ -39,12 +40,12 @@ private:
     void resetAllButtons();
 
     Ui::MainWindow *ui;
-    UnitManageWindow *unitManageWindow;          // 参试单位管理窗口
-    ControlStationManageWindow *stationManageWindow; // 控制站管理窗口
-    ProtocolManageWindow *protocolManageWindow;  // 协议管理窗口
-    InstructionManageWindow *instructionManageWindow;  // 新增指令管理窗口指针
+    UnitManageWindow *unitManageWindow;
+    ControlStationManageWindow *stationManageWindow;
+    ProtocolManageWindow *protocolManageWindow;
+    InstructionManageWindow *instructionManageWindow;
     TestManageWindow *testManageWindow;
-
+    TestResultsAnalysisWindow *testResultsAnalysisWindow;  // 新增分析窗口指针
 };
 
 #endif // MAINWINDOW_H

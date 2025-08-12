@@ -7,6 +7,7 @@
 #include "ProtocolManageWindow.h"
 #include "InstructionManageWindow.h"  // 新增指令管理窗口头文件
 #include "TestManageWindow.h"
+#include "TestResultsAnalysisWindow.h"
 
 #include <QStyle>
 #include <QList>
@@ -21,7 +22,8 @@ MainWindow::MainWindow(QWidget *parent)
     testManageWindow(nullptr),
     stationManageWindow(nullptr),
     protocolManageWindow(nullptr),
-    instructionManageWindow(nullptr)  // 初始化指令管理窗口指针
+    instructionManageWindow(nullptr),  // 初始化指令管理窗口指针
+    testResultsAnalysisWindow(nullptr)
 {
     ui->setupUi(this);
 
@@ -41,6 +43,7 @@ MainWindow::~MainWindow()
     delete protocolManageWindow;
     delete instructionManageWindow;  // 安全删除指令管理窗口
     delete testManageWindow;
+    delete testResultsAnalysisWindow;  // 安全删除分析窗口
 }
 
 void MainWindow::setupConnections()
@@ -134,7 +137,17 @@ void MainWindow::onbtnTestsclicked()
 void MainWindow::onBtnAnalysisClicked()
 {
     setActiveButton(ui->btnAnalysis);
-    ui->stackedWidget->setCurrentWidget(ui->pageAnalysis);
+    if (!testResultsAnalysisWindow) {
+        testResultsAnalysisWindow = new TestResultsAnalysisWindow(this);
+        ui->stackedWidget->addWidget(testResultsAnalysisWindow);
+
+        // 连接状态消息信号到主窗口状态栏
+        connect(testResultsAnalysisWindow, &TestResultsAnalysisWindow::statusMessageRequested,
+                this, [this](const QString &message, int timeout) {
+                    ui->statusbar->showMessage(message, timeout);
+                });
+    }
+    ui->stackedWidget->setCurrentWidget(testResultsAnalysisWindow);
 }
 
 void MainWindow::onBtnSystemClicked()
