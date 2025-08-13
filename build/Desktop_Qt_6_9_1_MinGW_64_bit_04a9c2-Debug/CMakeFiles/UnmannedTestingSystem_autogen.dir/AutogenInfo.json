@@ -795,6 +795,18 @@
 			null
 		],
 		[
+			"D:/UnmannedTesting/UnmannedTestingSystem-master/OrgManageWindow.h",
+			"MU",
+			"EWIEGA46WW/moc_OrgManageWindow.cpp",
+			null
+		],
+		[
+			"D:/UnmannedTesting/UnmannedTestingSystem-master/PermissionManageWindow.h",
+			"MU",
+			"EWIEGA46WW/moc_PermissionManageWindow.cpp",
+			null
+		],
+		[
 			"D:/UnmannedTesting/UnmannedTestingSystem-master/ProtocolDialog.h",
 			"MU",
 			"EWIEGA46WW/moc_ProtocolDialog.cpp",
@@ -804,6 +816,12 @@
 			"D:/UnmannedTesting/UnmannedTestingSystem-master/ProtocolManageWindow.h",
 			"MU",
 			"EWIEGA46WW/moc_ProtocolManageWindow.cpp",
+			null
+		],
+		[
+			"D:/UnmannedTesting/UnmannedTestingSystem-master/SystemManageWindow.h",
+			"MU",
+			"EWIEGA46WW/moc_SystemManageWindow.cpp",
 			null
 		],
 		[
@@ -828,6 +846,12 @@
 			"D:/UnmannedTesting/UnmannedTestingSystem-master/UnitManageWindow.h",
 			"MU",
 			"EWIEGA46WW/moc_UnitManageWindow.cpp",
+			null
+		],
+		[
+			"D:/UnmannedTesting/UnmannedTestingSystem-master/UserDialog.h",
+			"MU",
+			"EWIEGA46WW/moc_UserDialog.cpp",
 			null
 		],
 		[
@@ -951,12 +975,27 @@
 			null
 		],
 		[
+			"D:/UnmannedTesting/UnmannedTestingSystem-master/OrgManageWindow.cpp",
+			"MU",
+			null
+		],
+		[
+			"D:/UnmannedTesting/UnmannedTestingSystem-master/PermissionManageWindow.cpp",
+			"MU",
+			null
+		],
+		[
 			"D:/UnmannedTesting/UnmannedTestingSystem-master/ProtocolDialog.cpp",
 			"MU",
 			null
 		],
 		[
 			"D:/UnmannedTesting/UnmannedTestingSystem-master/ProtocolManageWindow.cpp",
+			"MU",
+			null
+		],
+		[
+			"D:/UnmannedTesting/UnmannedTestingSystem-master/SystemManageWindow.cpp",
 			"MU",
 			null
 		],
@@ -977,6 +1016,11 @@
 		],
 		[
 			"D:/UnmannedTesting/UnmannedTestingSystem-master/UnitManageWindow.cpp",
+			"MU",
+			null
+		],
+		[
+			"D:/UnmannedTesting/UnmannedTestingSystem-master/UserDialog.cpp",
 			"MU",
 			null
 		],

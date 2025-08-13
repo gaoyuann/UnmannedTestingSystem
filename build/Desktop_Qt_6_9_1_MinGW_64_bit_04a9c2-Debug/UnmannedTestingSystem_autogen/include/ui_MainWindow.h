@@ -39,13 +39,7 @@ public:
     QPushButton *btnCommands;
     QPushButton *btnTests;
     QPushButton *btnAnalysis;
-    QVBoxLayout *systemMenuLayout;
     QPushButton *btnSystem;
-    QVBoxLayout *systemSubLayout;
-    QPushButton *btnUserManage;
-    QPushButton *btnPermissionManage;
-    QPushButton *btnOrgManage;
-    QPushButton *btnDictManage;
     QSpacerItem *verticalSpacer;
     QPushButton *btnLogout;
     QStackedWidget *stackedWidget;
@@ -61,10 +55,6 @@ public:
     QWidget *pageTests;
     QWidget *pageAnalysis;
     QWidget *pageSystem;
-    QWidget *pageUserManage;
-    QWidget *pagePermissionManage;
-    QWidget *pageOrgManage;
-    QWidget *pageDictManage;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *MainWindow)
@@ -80,14 +70,14 @@ public:
         sideBar = new QFrame(centralwidget);
         sideBar->setObjectName("sideBar");
         sideBar->setStyleSheet(QString::fromUtf8("background-color: #2c3e50;"));
-        sideBar->setFrameShape(QFrame::Shape::StyledPanel);
-        sideBar->setFrameShadow(QFrame::Shadow::Raised);
+        sideBar->setFrameShape(QFrame::StyledPanel);
+        sideBar->setFrameShadow(QFrame::Raised);
         verticalLayout_2 = new QVBoxLayout(sideBar);
         verticalLayout_2->setObjectName("verticalLayout_2");
         labelLogo = new QLabel(sideBar);
         labelLogo->setObjectName("labelLogo");
         labelLogo->setStyleSheet(QString::fromUtf8("color: white; font-size: 20px; font-weight: bold; padding: 20px;"));
-        labelLogo->setAlignment(Qt::AlignmentFlag::AlignCenter);
+        labelLogo->setAlignment(Qt::AlignCenter);
 
         verticalLayout_2->addWidget(labelLogo);
 
@@ -235,8 +225,6 @@ public:
 
         verticalLayout_2->addWidget(btnAnalysis);
 
-        systemMenuLayout = new QVBoxLayout();
-        systemMenuLayout->setObjectName("systemMenuLayout");
         btnSystem = new QPushButton(sideBar);
         btnSystem->setObjectName("btnSystem");
         btnSystem->setStyleSheet(QString::fromUtf8("QPushButton {\n"
@@ -259,79 +247,7 @@ public:
         btnSystem->setIcon(icon6);
         btnSystem->setIconSize(QSize(24, 24));
 
-        systemMenuLayout->addWidget(btnSystem);
-
-        systemSubLayout = new QVBoxLayout();
-        systemSubLayout->setObjectName("systemSubLayout");
-        btnUserManage = new QPushButton(sideBar);
-        btnUserManage->setObjectName("btnUserManage");
-        btnUserManage->setStyleSheet(QString::fromUtf8("QPushButton {\n"
-"    color: #bdc3c7; /* \345\255\220\351\241\271\351\242\234\350\211\262\347\250\215\346\265\205\357\274\214\345\214\272\345\210\206\344\270\273\350\217\234\345\215\225 */\n"
-"    text-align: left;\n"
-"    padding: 10px 20px;\n"
-"    border: none;\n"
-"    font-size: 13px;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    color: white;\n"
-"    background-color: #34495e;\n"
-"}"));
-
-        systemSubLayout->addWidget(btnUserManage);
-
-        btnPermissionManage = new QPushButton(sideBar);
-        btnPermissionManage->setObjectName("btnPermissionManage");
-        btnPermissionManage->setStyleSheet(QString::fromUtf8("QPushButton {\n"
-"    color: #bdc3c7;\n"
-"    text-align: left;\n"
-"    padding: 10px 20px;\n"
-"    border: none;\n"
-"    font-size: 13px;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    color: white;\n"
-"    background-color: #34495e;\n"
-"}"));
-
-        systemSubLayout->addWidget(btnPermissionManage);
-
-        btnOrgManage = new QPushButton(sideBar);
-        btnOrgManage->setObjectName("btnOrgManage");
-        btnOrgManage->setStyleSheet(QString::fromUtf8("QPushButton {\n"
-"    color: #bdc3c7;\n"
-"    text-align: left;\n"
-"    padding: 10px 20px;\n"
-"    border: none;\n"
-"    font-size: 13px;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    color: white;\n"
-"    background-color: #34495e;\n"
-"}"));
-
-        systemSubLayout->addWidget(btnOrgManage);
-
-        btnDictManage = new QPushButton(sideBar);
-        btnDictManage->setObjectName("btnDictManage");
-        btnDictManage->setStyleSheet(QString::fromUtf8("QPushButton {\n"
-"    color: #bdc3c7;\n"
-"    text-align: left;\n"
-"    padding: 10px 20px;\n"
-"    border: none;\n"
-"    font-size: 13px;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    color: white;\n"
-"    background-color: #34495e;\n"
-"}"));
-
-        systemSubLayout->addWidget(btnDictManage);
-
-
-        systemMenuLayout->addLayout(systemSubLayout);
-
-
-        verticalLayout_2->addLayout(systemMenuLayout);
+        verticalLayout_2->addWidget(btnSystem);
 
         verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Expanding);
 
@@ -370,14 +286,14 @@ public:
         labelWelcome = new QLabel(pageHome);
         labelWelcome->setObjectName("labelWelcome");
         labelWelcome->setStyleSheet(QString::fromUtf8("font-size: 24px; color: #2c3e50; padding: 20px;"));
-        labelWelcome->setAlignment(Qt::AlignmentFlag::AlignCenter);
+        labelWelcome->setAlignment(Qt::AlignCenter);
 
         verticalLayout_3->addWidget(labelWelcome);
 
         labelDescription = new QLabel(pageHome);
         labelDescription->setObjectName("labelDescription");
         labelDescription->setStyleSheet(QString::fromUtf8("font-size: 16px; color: #7f8c8d; padding: 10px 40px;"));
-        labelDescription->setAlignment(Qt::AlignmentFlag::AlignCenter);
+        labelDescription->setAlignment(Qt::AlignCenter);
 
         verticalLayout_3->addWidget(labelDescription);
 
@@ -407,18 +323,6 @@ public:
         pageSystem = new QWidget();
         pageSystem->setObjectName("pageSystem");
         stackedWidget->addWidget(pageSystem);
-        pageUserManage = new QWidget();
-        pageUserManage->setObjectName("pageUserManage");
-        stackedWidget->addWidget(pageUserManage);
-        pagePermissionManage = new QWidget();
-        pagePermissionManage->setObjectName("pagePermissionManage");
-        stackedWidget->addWidget(pagePermissionManage);
-        pageOrgManage = new QWidget();
-        pageOrgManage->setObjectName("pageOrgManage");
-        stackedWidget->addWidget(pageOrgManage);
-        pageDictManage = new QWidget();
-        pageDictManage->setObjectName("pageDictManage");
-        stackedWidget->addWidget(pageDictManage);
 
         horizontalLayout->addWidget(stackedWidget);
 
@@ -428,10 +332,6 @@ public:
         MainWindow->setStatusBar(statusbar);
 
         retranslateUi(MainWindow);
-        QObject::connect(btnUserManage, &QPushButton::clicked, stackedWidget, &QStackedWidget::setCurrentWidget);
-        QObject::connect(btnPermissionManage, &QPushButton::clicked, stackedWidget, &QStackedWidget::setCurrentWidget);
-        QObject::connect(btnOrgManage, &QPushButton::clicked, stackedWidget, &QStackedWidget::setCurrentWidget);
-        QObject::connect(btnDictManage, &QPushButton::clicked, stackedWidget, &QStackedWidget::setCurrentWidget);
 
         QMetaObject::connectSlotsByName(MainWindow);
     } // setupUi
@@ -447,10 +347,6 @@ public:
         btnTests->setText(QCoreApplication::translate("MainWindow", "\346\265\213\350\257\225\347\256\241\347\220\206", nullptr));
         btnAnalysis->setText(QCoreApplication::translate("MainWindow", "\346\265\213\350\257\204\347\273\223\346\236\234\345\210\206\346\236\220", nullptr));
         btnSystem->setText(QCoreApplication::translate("MainWindow", "\347\263\273\347\273\237\347\256\241\347\220\206", nullptr));
-        btnUserManage->setText(QCoreApplication::translate("MainWindow", "\347\224\250\346\210\267\347\256\241\347\220\206", nullptr));
-        btnPermissionManage->setText(QCoreApplication::translate("MainWindow", "\346\235\203\351\231\220\347\256\241\347\220\206", nullptr));
-        btnOrgManage->setText(QCoreApplication::translate("MainWindow", "\346\234\272\346\236\204\347\256\241\347\220\206", nullptr));
-        btnDictManage->setText(QCoreApplication::translate("MainWindow", "\346\225\260\346\215\256\345\255\227\345\205\270", nullptr));
         btnLogout->setText(QCoreApplication::translate("MainWindow", "\351\200\200\345\207\272\347\263\273\347\273\237", nullptr));
         labelWelcome->setText(QCoreApplication::translate("MainWindow", "\346\254\242\350\277\216\344\275\277\347\224\250\346\227\240\344\272\272\345\271\263\345\217\260\346\265\213\350\257\225\350\257\204\344\274\260\347\263\273\347\273\237", nullptr));
         labelDescription->setText(QCoreApplication::translate("MainWindow", "\350\257\267\344\273\216\345\267\246\344\276\247\350\217\234\345\215\225\351\200\211\346\213\251\345\212\237\350\203\275\346\250\241\345\235\227\345\274\200\345\247\213\345\267\245\344\275\234", nullptr));

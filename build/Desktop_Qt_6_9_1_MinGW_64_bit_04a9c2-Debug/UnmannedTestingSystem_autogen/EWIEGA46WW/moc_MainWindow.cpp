@@ -46,12 +46,8 @@ template <> constexpr inline auto MainWindow::qt_create_metaobjectdata<qt_meta_t
         "onBtnCommandsClicked",
         "onbtnTestsclicked",
         "onBtnAnalysisClicked",
-        "onBtnLogoutClicked",
-        "on_btnSystem_clicked",
-        "on_btnUserManage_clicked",
-        "on_btnPermissionManage_clicked",
-        "on_btnOrgManage_clicked",
-        "on_btnDictManage_clicked"
+        "onBtnSystemClicked",
+        "onBtnLogoutClicked"
     };
 
     QtMocHelpers::UintData qt_methods {
@@ -67,18 +63,10 @@ template <> constexpr inline auto MainWindow::qt_create_metaobjectdata<qt_meta_t
         QtMocHelpers::SlotData<void()>(6, 2, QMC::AccessPrivate, QMetaType::Void),
         // Slot 'onBtnAnalysisClicked'
         QtMocHelpers::SlotData<void()>(7, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'onBtnLogoutClicked'
+        // Slot 'onBtnSystemClicked'
         QtMocHelpers::SlotData<void()>(8, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'on_btnSystem_clicked'
+        // Slot 'onBtnLogoutClicked'
         QtMocHelpers::SlotData<void()>(9, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'on_btnUserManage_clicked'
-        QtMocHelpers::SlotData<void()>(10, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'on_btnPermissionManage_clicked'
-        QtMocHelpers::SlotData<void()>(11, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'on_btnOrgManage_clicked'
-        QtMocHelpers::SlotData<void()>(12, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'on_btnDictManage_clicked'
-        QtMocHelpers::SlotData<void()>(13, 2, QMC::AccessPrivate, QMetaType::Void),
     };
     QtMocHelpers::UintData qt_properties {
     };
@@ -108,12 +96,8 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 3: _t->onBtnCommandsClicked(); break;
         case 4: _t->onbtnTestsclicked(); break;
         case 5: _t->onBtnAnalysisClicked(); break;
-        case 6: _t->onBtnLogoutClicked(); break;
-        case 7: _t->on_btnSystem_clicked(); break;
-        case 8: _t->on_btnUserManage_clicked(); break;
-        case 9: _t->on_btnPermissionManage_clicked(); break;
-        case 10: _t->on_btnOrgManage_clicked(); break;
-        case 11: _t->on_btnDictManage_clicked(); break;
+        case 6: _t->onBtnSystemClicked(); break;
+        case 7: _t->onBtnLogoutClicked(); break;
         default: ;
         }
     }
@@ -139,14 +123,14 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 12)
+        if (_id < 8)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 12;
+        _id -= 8;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 12)
+        if (_id < 8)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 12;
+        _id -= 8;
     }
     return _id;
 }

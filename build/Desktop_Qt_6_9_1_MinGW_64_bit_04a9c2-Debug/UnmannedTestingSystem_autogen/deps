@@ -725,10 +725,14 @@ UnmannedTestingSystem_autogen/timestamp: \
 	D:/UnmannedTesting/UnmannedTestingSystem-master/MessageFormatDialog.h \
 	D:/UnmannedTesting/UnmannedTestingSystem-master/NewTaskWithItemsDialog.cpp \
 	D:/UnmannedTesting/UnmannedTestingSystem-master/NewTaskWithItemsDialog.h \
+	D:/UnmannedTesting/UnmannedTestingSystem-master/OrgManageWindow.cpp \
+	D:/UnmannedTesting/UnmannedTestingSystem-master/OrgManageWindow.h \
 	D:/UnmannedTesting/UnmannedTestingSystem-master/ProtocolDialog.cpp \
 	D:/UnmannedTesting/UnmannedTestingSystem-master/ProtocolDialog.h \
 	D:/UnmannedTesting/UnmannedTestingSystem-master/ProtocolManageWindow.cpp \
 	D:/UnmannedTesting/UnmannedTestingSystem-master/ProtocolManageWindow.h \
+	D:/UnmannedTesting/UnmannedTestingSystem-master/SystemManageWindow.cpp \
+	D:/UnmannedTesting/UnmannedTestingSystem-master/SystemManageWindow.h \
 	D:/UnmannedTesting/UnmannedTestingSystem-master/TaskDetailWindow.cpp \
 	D:/UnmannedTesting/UnmannedTestingSystem-master/TaskDetailWindow.h \
 	D:/UnmannedTesting/UnmannedTestingSystem-master/TestManageWindow.cpp \
@@ -737,6 +741,8 @@ UnmannedTestingSystem_autogen/timestamp: \
 	D:/UnmannedTesting/UnmannedTestingSystem-master/UnitDialog.h \
 	D:/UnmannedTesting/UnmannedTestingSystem-master/UnitManageWindow.cpp \
 	D:/UnmannedTesting/UnmannedTestingSystem-master/UnitManageWindow.h \
+	D:/UnmannedTesting/UnmannedTestingSystem-master/UserDialog.cpp \
+	D:/UnmannedTesting/UnmannedTestingSystem-master/UserDialog.h \
 	D:/UnmannedTesting/UnmannedTestingSystem-master/UserManageWindow.cpp \
 	D:/UnmannedTesting/UnmannedTestingSystem-master/UserManageWindow.h \
 	D:/UnmannedTesting/UnmannedTestingSystem-master/build/Desktop_Qt_6_9_1_MinGW_64_bit_04a9c2-Debug/.qtc/package-manager/auto-setup.cmake \
@@ -753,11 +759,14 @@ UnmannedTestingSystem_autogen/timestamp: \
 	D:/UnmannedTesting/UnmannedTestingSystem-master/MainWindow.ui \
 	D:/UnmannedTesting/UnmannedTestingSystem-master/MessageFormatDialog.ui \
 	D:/UnmannedTesting/UnmannedTestingSystem-master/NewTaskWithItemsDialog.ui \
+	D:/UnmannedTesting/UnmannedTestingSystem-master/OrgManageWindow.ui \
 	D:/UnmannedTesting/UnmannedTestingSystem-master/ProtocolDialog.ui \
 	D:/UnmannedTesting/UnmannedTestingSystem-master/ProtocolManageWindow.ui \
+	D:/UnmannedTesting/UnmannedTestingSystem-master/SystemManageWindow.ui \
 	D:/UnmannedTesting/UnmannedTestingSystem-master/TaskDetailWindow.ui \
 	D:/UnmannedTesting/UnmannedTestingSystem-master/TestManageWindow.ui \
 	D:/UnmannedTesting/UnmannedTestingSystem-master/UnitDialog.ui \
 	D:/UnmannedTesting/UnmannedTestingSystem-master/UnitManageWindow.ui \
+	D:/UnmannedTesting/UnmannedTestingSystem-master/UserDialog.ui \
 	D:/UnmannedTesting/UnmannedTestingSystem-master/UserManageWindow.ui \
 	D:/Qt/Tools/CMake_64/bin/cmake.exe

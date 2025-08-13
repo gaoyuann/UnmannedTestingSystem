@@ -24,10 +24,10 @@
        <string notr="true">background-color: #2c3e50;</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::Shape::StyledPanel</enum>
+       <enum>QFrame::StyledPanel</enum>
       </property>
       <property name="frameShadow">
-       <enum>QFrame::Shadow::Raised</enum>
+       <enum>QFrame::Raised</enum>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_2">
        <item>
@@ -39,7 +39,7 @@
           <string>无人平台测试评估系统</string>
          </property>
          <property name="alignment">
-          <set>Qt::AlignmentFlag::AlignCenter</set>
+          <set>Qt::AlignCenter</set>
          </property>
         </widget>
        </item>
@@ -57,7 +57,7 @@
 QPushButton:hover {
     background-color: #34495e;
 }
-QPushButton[active=&quot;true&quot;] {
+QPushButton[active="true"] {
     background-color: #34495e;
     border-left: 4px solid #3498db;
 }</string>
@@ -91,7 +91,7 @@ QPushButton[active=&quot;true&quot;] {
 QPushButton:hover {
     background-color: #34495e;
 }
-QPushButton[active=&quot;true&quot;] {
+QPushButton[active="true"] {
     background-color: #34495e;
     border-left: 4px solid #3498db;
 }</string>
@@ -125,7 +125,7 @@ QPushButton[active=&quot;true&quot;] {
 QPushButton:hover {
     background-color: #34495e;
 }
-QPushButton[active=&quot;true&quot;] {
+QPushButton[active="true"] {
     background-color: #34495e;
     border-left: 4px solid #3498db;
 }</string>
@@ -159,7 +159,7 @@ QPushButton[active=&quot;true&quot;] {
 QPushButton:hover {
     background-color: #34495e;
 }
-QPushButton[active=&quot;true&quot;] {
+QPushButton[active="true"] {
     background-color: #34495e;
     border-left: 4px solid #3498db;
 }</string>
@@ -193,7 +193,7 @@ QPushButton[active=&quot;true&quot;] {
 QPushButton:hover {
     background-color: #34495e;
 }
-QPushButton[active=&quot;true&quot;] {
+QPushButton[active="true"] {
     background-color: #34495e;
     border-left: 4px solid #3498db;
 }</string>
@@ -227,7 +227,7 @@ QPushButton[active=&quot;true&quot;] {
 QPushButton:hover {
     background-color: #34495e;
 }
-QPushButton[active=&quot;true&quot;] {
+QPushButton[active="true"] {
     background-color: #34495e;
     border-left: 4px solid #3498db;
 }</string>
@@ -248,14 +248,9 @@ QPushButton[active=&quot;true&quot;] {
         </widget>
        </item>
        <item>
-        <layout class="QVBoxLayout" name="systemMenuLayout">
-         <property name="ContentsMargins" stdset="0">
-          <set>0 0 0 0</set>
-         </property>
-         <item>
-          <widget class="QPushButton" name="btnSystem">
-           <property name="styleSheet">
-            <string notr="true">QPushButton {
+        <widget class="QPushButton" name="btnSystem">
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
     color: white;
     text-align: left;
     padding: 12px 20px;
@@ -266,119 +261,30 @@ QPushButton[active=&quot;true&quot;] {
 QPushButton:hover {
     background-color: #34495e;
 }
-QPushButton[active=&quot;true&quot;] {
+QPushButton[active="true"] {
     background-color: #34495e;
     border-left: 4px solid #3498db;
 }</string>
-           </property>
-           <property name="text">
-            <string>系统管理</string>
-           </property>
-           <property name="icon">
-            <iconset>
-             <normaloff>:/icons/system.png</normaloff>:/icons/system.png</iconset>
-           </property>
-           <property name="iconSize">
-            <size>
-             <width>24</width>
-             <height>24</height>
-            </size>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <layout class="QVBoxLayout" name="systemSubLayout">
-           <property name="ContentsMargins" stdset="0">
-            <set>20 0 0 0</set>
-           </property>
-           <item>
-            <widget class="QPushButton" name="btnUserManage">
-             <property name="styleSheet">
-              <string notr="true">QPushButton {
-    color: #bdc3c7; /* 子项颜色稍浅，区分主菜单 */
-    text-align: left;
-    padding: 10px 20px;
-    border: none;
-    font-size: 13px;
-}
-QPushButton:hover {
-    color: white;
-    background-color: #34495e;
-}</string>
-             </property>
-             <property name="text">
-              <string>用户管理</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QPushButton" name="btnPermissionManage">
-             <property name="styleSheet">
-              <string notr="true">QPushButton {
-    color: #bdc3c7;
-    text-align: left;
-    padding: 10px 20px;
-    border: none;
-    font-size: 13px;
-}
-QPushButton:hover {
-    color: white;
-    background-color: #34495e;
-}</string>
-             </property>
-             <property name="text">
-              <string>权限管理</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QPushButton" name="btnOrgManage">
-             <property name="styleSheet">
-              <string notr="true">QPushButton {
-    color: #bdc3c7;
-    text-align: left;
-    padding: 10px 20px;
-    border: none;
-    font-size: 13px;
-}
-QPushButton:hover {
-    color: white;
-    background-color: #34495e;
-}</string>
-             </property>
-             <property name="text">
-              <string>机构管理</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QPushButton" name="btnDictManage">
-             <property name="styleSheet">
-              <string notr="true">QPushButton {
-    color: #bdc3c7;
-    text-align: left;
-    padding: 10px 20px;
-    border: none;
-    font-size: 13px;
-}
-QPushButton:hover {
-    color: white;
-    background-color: #34495e;
-}</string>
-             </property>
-             <property name="text">
-              <string>数据字典</string>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </item>
-        </layout>
+         </property>
+         <property name="text">
+          <string>系统管理</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>:/icons/system.png</normaloff>:/icons/system.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>24</width>
+           <height>24</height>
+          </size>
+         </property>
+        </widget>
        </item>
        <item>
         <spacer name="verticalSpacer">
          <property name="orientation">
-          <enum>Qt::Orientation::Vertical</enum>
+          <enum>Qt::Vertical</enum>
          </property>
          <property name="sizeHint" stdset="0">
           <size>
@@ -437,7 +343,7 @@ QPushButton:hover {
            <string>欢迎使用无人平台测试评估系统</string>
           </property>
           <property name="alignment">
-           <set>Qt::AlignmentFlag::AlignCenter</set>
+           <set>Qt::AlignCenter</set>
           </property>
          </widget>
         </item>
@@ -450,14 +356,14 @@ QPushButton:hover {
            <string>请从左侧菜单选择功能模块开始工作</string>
           </property>
           <property name="alignment">
-           <set>Qt::AlignmentFlag::AlignCenter</set>
+           <set>Qt::AlignCenter</set>
           </property>
          </widget>
         </item>
         <item>
          <spacer name="verticalSpacer_2">
           <property name="orientation">
-           <enum>Qt::Orientation::Vertical</enum>
+           <enum>Qt::Vertical</enum>
           </property>
           <property name="sizeHint" stdset="0">
            <size>
@@ -476,10 +382,6 @@ QPushButton:hover {
       <widget class="QWidget" name="pageTests"/>
       <widget class="QWidget" name="pageAnalysis"/>
       <widget class="QWidget" name="pageSystem"/>
-      <widget class="QWidget" name="pageUserManage"/>
-      <widget class="QWidget" name="pagePermissionManage"/>
-      <widget class="QWidget" name="pageOrgManage"/>
-      <widget class="QWidget" name="pageDictManage"/>
      </widget>
     </item>
    </layout>
@@ -487,86 +389,5 @@ QPushButton:hover {
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
- <connections>
-  <connection>
-   <sender>btnSystem</sender>
-   <signal>clicked()</signal>
-   <receiver>systemSubMenu</receiver>
-   <slot>setVisible(!isVisible())</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>150</x>
-     <y>500</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>150</x>
-     <y>550</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>btnUserManage</sender>
-   <signal>clicked()</signal>
-   <receiver>stackedWidget</receiver>
-   <slot>setCurrentWidget(pageUserManage)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>20</x>
-     <y>20</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>20</x>
-     <y>20</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>btnPermissionManage</sender>
-   <signal>clicked()</signal>
-   <receiver>stackedWidget</receiver>
-   <slot>setCurrentWidget(pagePermissionManage)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>20</x>
-     <y>20</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>20</x>
-     <y>20</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>btnOrgManage</sender>
-   <signal>clicked()</signal>
-   <receiver>stackedWidget</receiver>
-   <slot>setCurrentWidget(pageOrgManage)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>20</x>
-     <y>20</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>20</x>
-     <y>20</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>btnDictManage</sender>
-   <signal>clicked()</signal>
-   <receiver>stackedWidget</receiver>
-   <slot>setCurrentWidget(pageDictManage)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>20</x>
-     <y>20</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>20</x>
-     <y>20</y>
-    </hint>
-   </hints>
-  </connection>
- </connections>
+ <connections/>
 </ui>

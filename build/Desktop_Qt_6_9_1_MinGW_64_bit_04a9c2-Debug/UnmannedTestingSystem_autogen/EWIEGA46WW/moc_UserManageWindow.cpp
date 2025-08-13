@@ -38,10 +38,64 @@ template <> constexpr inline auto UserManageWindow::qt_create_metaobjectdata<qt_
 {
     namespace QMC = QtMocConstants;
     QtMocHelpers::StringRefStorage qt_stringData {
-        "UserManageWindow"
+        "UserManageWindow",
+        "statusMessageRequested",
+        "",
+        "message",
+        "timeout",
+        "backToSystemManage",
+        "onBtnAddClicked",
+        "onBtnEditClicked",
+        "onBtnDeleteClicked",
+        "onBtnSearchClicked",
+        "onBtnFirstClicked",
+        "onBtnPrevClicked",
+        "onBtnNextClicked",
+        "onBtnLastClicked",
+        "onComboPageSizeChanged",
+        "text",
+        "onComboPageChanged",
+        "index",
+        "onBtnBackClicked"
     };
 
     QtMocHelpers::UintData qt_methods {
+        // Signal 'statusMessageRequested'
+        QtMocHelpers::SignalData<void(const QString &, int)>(1, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::QString, 3 }, { QMetaType::Int, 4 },
+        }}),
+        // Signal 'statusMessageRequested'
+        QtMocHelpers::SignalData<void(const QString &)>(1, 2, QMC::AccessPublic | QMC::MethodCloned, QMetaType::Void, {{
+            { QMetaType::QString, 3 },
+        }}),
+        // Signal 'backToSystemManage'
+        QtMocHelpers::SignalData<void()>(5, 2, QMC::AccessPublic, QMetaType::Void),
+        // Slot 'onBtnAddClicked'
+        QtMocHelpers::SlotData<void()>(6, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'onBtnEditClicked'
+        QtMocHelpers::SlotData<void()>(7, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'onBtnDeleteClicked'
+        QtMocHelpers::SlotData<void()>(8, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'onBtnSearchClicked'
+        QtMocHelpers::SlotData<void()>(9, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'onBtnFirstClicked'
+        QtMocHelpers::SlotData<void()>(10, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'onBtnPrevClicked'
+        QtMocHelpers::SlotData<void()>(11, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'onBtnNextClicked'
+        QtMocHelpers::SlotData<void()>(12, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'onBtnLastClicked'
+        QtMocHelpers::SlotData<void()>(13, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'onComboPageSizeChanged'
+        QtMocHelpers::SlotData<void(const QString &)>(14, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { QMetaType::QString, 15 },
+        }}),
+        // Slot 'onComboPageChanged'
+        QtMocHelpers::SlotData<void(int)>(16, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { QMetaType::Int, 17 },
+        }}),
+        // Slot 'onBtnBackClicked'
+        QtMocHelpers::SlotData<void()>(18, 2, QMC::AccessPrivate, QMetaType::Void),
     };
     QtMocHelpers::UintData qt_properties {
     };
@@ -63,10 +117,31 @@ Q_CONSTINIT const QMetaObject UserManageWindow::staticMetaObject = { {
 void UserManageWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
     auto *_t = static_cast<UserManageWindow *>(_o);
-    (void)_t;
-    (void)_c;
-    (void)_id;
-    (void)_a;
+    if (_c == QMetaObject::InvokeMetaMethod) {
+        switch (_id) {
+        case 0: _t->statusMessageRequested((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2]))); break;
+        case 1: _t->statusMessageRequested((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
+        case 2: _t->backToSystemManage(); break;
+        case 3: _t->onBtnAddClicked(); break;
+        case 4: _t->onBtnEditClicked(); break;
+        case 5: _t->onBtnDeleteClicked(); break;
+        case 6: _t->onBtnSearchClicked(); break;
+        case 7: _t->onBtnFirstClicked(); break;
+        case 8: _t->onBtnPrevClicked(); break;
+        case 9: _t->onBtnNextClicked(); break;
+        case 10: _t->onBtnLastClicked(); break;
+        case 11: _t->onComboPageSizeChanged((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
+        case 12: _t->onComboPageChanged((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
+        case 13: _t->onBtnBackClicked(); break;
+        default: ;
+        }
+    }
+    if (_c == QMetaObject::IndexOfMethod) {
+        if (QtMocHelpers::indexOfMethod<void (UserManageWindow::*)(const QString & , int )>(_a, &UserManageWindow::statusMessageRequested, 0))
+            return;
+        if (QtMocHelpers::indexOfMethod<void (UserManageWindow::*)()>(_a, &UserManageWindow::backToSystemManage, 2))
+            return;
+    }
 }
 
 const QMetaObject *UserManageWindow::metaObject() const
@@ -85,6 +160,30 @@ void *UserManageWindow::qt_metacast(const char *_clname)
 int UserManageWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
     _id = QWidget::qt_metacall(_c, _id, _a);
+    if (_id < 0)
+        return _id;
+    if (_c == QMetaObject::InvokeMetaMethod) {
+        if (_id < 14)
+            qt_static_metacall(this, _c, _id, _a);
+        _id -= 14;
+    }
+    if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
+        if (_id < 14)
+            *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
+        _id -= 14;
+    }
     return _id;
+}
+
+// SIGNAL 0
+void UserManageWindow::statusMessageRequested(const QString & _t1, int _t2)
+{
+    QMetaObject::activate<void>(this, &staticMetaObject, 0, nullptr, _t1, _t2);
+}
+
+// SIGNAL 2
+void UserManageWindow::backToSystemManage()
+{
+    QMetaObject::activate(this, &staticMetaObject, 2, nullptr);
 }
 QT_WARNING_POP

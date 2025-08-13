@@ -46,6 +46,11 @@ find_package(Qt6 REQUIRED COMPONENTS Widgets)
         NewTaskWithItemsDialog.h NewTaskWithItemsDialog.cpp NewTaskWithItemsDialog.ui
         TaskDetailWindow.h TaskDetailWindow.cpp TaskDetailWindow.ui
         UserManageWindow.h UserManageWindow.cpp UserManageWindow.ui
+        SystemManageWindow.h SystemManageWindow.cpp SystemManageWindow.ui
+        UserManageWindow.h UserManageWindow.cpp UserManageWindow.ui
+        UserDialog.h UserDialog.cpp UserDialog.ui
+        OrgManageWindow.h OrgManageWindow.cpp OrgManageWindow.ui
+        PermissionManageWindow.h PermissionManageWindow.cpp PermissionManageWindow.ui
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET UnmannedTestingSystem APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
