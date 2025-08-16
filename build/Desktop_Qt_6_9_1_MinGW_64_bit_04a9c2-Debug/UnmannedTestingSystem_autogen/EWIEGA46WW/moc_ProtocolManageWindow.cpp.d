@@ -1,6 +1,10 @@
 D:/UnmannedTesting/UnmannedTestingSystem-master/build/Desktop_Qt_6_9_1_MinGW_64_bit_04a9c2-Debug/UnmannedTestingSystem_autogen/EWIEGA46WW/moc_ProtocolManageWindow.cpp: D:/UnmannedTesting/UnmannedTestingSystem-master/ProtocolManageWindow.h \
   D:/UnmannedTesting/UnmannedTestingSystem-master/build/Desktop_Qt_6_9_1_MinGW_64_bit_04a9c2-Debug/UnmannedTestingSystem_autogen/moc_predefs.h \
+  D:/Qt/6.9.1/mingw_64/include/QtCore/QMap \
+  D:/Qt/6.9.1/mingw_64/include/QtCore/QString \
   D:/Qt/6.9.1/mingw_64/include/QtCore/QStringList \
+  D:/Qt/6.9.1/mingw_64/include/QtCore/QVariant \
+  D:/Qt/6.9.1/mingw_64/include/QtCore/QVariantMap \
   D:/Qt/6.9.1/mingw_64/include/QtCore/QVector \
   D:/Qt/6.9.1/mingw_64/include/QtCore/q17memory.h \
   D:/Qt/6.9.1/mingw_64/include/QtCore/q20functional.h \
@@ -126,24 +130,21 @@ D:/UnmannedTesting/UnmannedTestingSystem-master/build/Desktop_Qt_6_9_1_MinGW_64_
   D:/Qt/6.9.1/mingw_64/include/QtCore/qtypes.h \
   D:/Qt/6.9.1/mingw_64/include/QtCore/qutf8stringview.h \
   D:/Qt/6.9.1/mingw_64/include/QtCore/qvariant.h \
+  D:/Qt/6.9.1/mingw_64/include/QtCore/qvariantmap.h \
   D:/Qt/6.9.1/mingw_64/include/QtCore/qvarlengtharray.h \
   D:/Qt/6.9.1/mingw_64/include/QtCore/qvector.h \
   D:/Qt/6.9.1/mingw_64/include/QtCore/qversiontagging.h \
   D:/Qt/6.9.1/mingw_64/include/QtCore/qxptype_traits.h \
   D:/Qt/6.9.1/mingw_64/include/QtCore/qyieldcpu.h \
   D:/Qt/6.9.1/mingw_64/include/QtGui/QPainter \
-  D:/Qt/6.9.1/mingw_64/include/QtGui/qaction.h \
-  D:/Qt/6.9.1/mingw_64/include/QtGui/qbitmap.h \
   D:/Qt/6.9.1/mingw_64/include/QtGui/qbrush.h \
   D:/Qt/6.9.1/mingw_64/include/QtGui/qcolor.h \
-  D:/Qt/6.9.1/mingw_64/include/QtGui/qcursor.h \
   D:/Qt/6.9.1/mingw_64/include/QtGui/qfont.h \
   D:/Qt/6.9.1/mingw_64/include/QtGui/qfontinfo.h \
   D:/Qt/6.9.1/mingw_64/include/QtGui/qfontmetrics.h \
   D:/Qt/6.9.1/mingw_64/include/QtGui/qfontvariableaxis.h \
   D:/Qt/6.9.1/mingw_64/include/QtGui/qicon.h \
   D:/Qt/6.9.1/mingw_64/include/QtGui/qimage.h \
-  D:/Qt/6.9.1/mingw_64/include/QtGui/qkeysequence.h \
   D:/Qt/6.9.1/mingw_64/include/QtGui/qpaintdevice.h \
   D:/Qt/6.9.1/mingw_64/include/QtGui/qpainter.h \
   D:/Qt/6.9.1/mingw_64/include/QtGui/qpalette.h \

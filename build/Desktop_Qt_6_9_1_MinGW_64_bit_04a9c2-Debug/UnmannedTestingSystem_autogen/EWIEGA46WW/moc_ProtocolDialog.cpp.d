@@ -1,8 +1,12 @@
 D:/UnmannedTesting/UnmannedTestingSystem-master/build/Desktop_Qt_6_9_1_MinGW_64_bit_04a9c2-Debug/UnmannedTestingSystem_autogen/EWIEGA46WW/moc_ProtocolDialog.cpp: D:/UnmannedTesting/UnmannedTestingSystem-master/ProtocolDialog.h \
   D:/UnmannedTesting/UnmannedTestingSystem-master/build/Desktop_Qt_6_9_1_MinGW_64_bit_04a9c2-Debug/UnmannedTestingSystem_autogen/moc_predefs.h \
+  D:/Qt/6.9.1/mingw_64/include/QtCore/QMap \
+  D:/Qt/6.9.1/mingw_64/include/QtCore/QString \
+  D:/Qt/6.9.1/mingw_64/include/QtCore/QVariant \
+  D:/Qt/6.9.1/mingw_64/include/QtCore/QVariantMap \
+  D:/Qt/6.9.1/mingw_64/include/QtCore/QVector \
   D:/Qt/6.9.1/mingw_64/include/QtCore/q17memory.h \
   D:/Qt/6.9.1/mingw_64/include/QtCore/q20functional.h \
-  D:/Qt/6.9.1/mingw_64/include/QtCore/q20iterator.h \
   D:/Qt/6.9.1/mingw_64/include/QtCore/q20memory.h \
   D:/Qt/6.9.1/mingw_64/include/QtCore/q20type_traits.h \
   D:/Qt/6.9.1/mingw_64/include/QtCore/q20utility.h \
@@ -35,7 +39,6 @@ D:/UnmannedTesting/UnmannedTestingSystem-master/build/Desktop_Qt_6_9_1_MinGW_64_
   D:/Qt/6.9.1/mingw_64/include/QtCore/qdarwinhelpers.h \
   D:/Qt/6.9.1/mingw_64/include/QtCore/qdatastream.h \
   D:/Qt/6.9.1/mingw_64/include/QtCore/qdebug.h \
-  D:/Qt/6.9.1/mingw_64/include/QtCore/qendian.h \
   D:/Qt/6.9.1/mingw_64/include/QtCore/qexceptionhandling.h \
   D:/Qt/6.9.1/mingw_64/include/QtCore/qflags.h \
   D:/Qt/6.9.1/mingw_64/include/QtCore/qfloat16.h \
@@ -51,12 +54,10 @@ D:/UnmannedTesting/UnmannedTestingSystem-master/build/Desktop_Qt_6_9_1_MinGW_64_
   D:/Qt/6.9.1/mingw_64/include/QtCore/qiterable.h \
   D:/Qt/6.9.1/mingw_64/include/QtCore/qiterator.h \
   D:/Qt/6.9.1/mingw_64/include/QtCore/qlatin1stringview.h \
-  D:/Qt/6.9.1/mingw_64/include/QtCore/qline.h \
   D:/Qt/6.9.1/mingw_64/include/QtCore/qlist.h \
   D:/Qt/6.9.1/mingw_64/include/QtCore/qlogging.h \
   D:/Qt/6.9.1/mingw_64/include/QtCore/qmalloc.h \
   D:/Qt/6.9.1/mingw_64/include/QtCore/qmap.h \
-  D:/Qt/6.9.1/mingw_64/include/QtCore/qmargins.h \
   D:/Qt/6.9.1/mingw_64/include/QtCore/qmath.h \
   D:/Qt/6.9.1/mingw_64/include/QtCore/qmetacontainer.h \
   D:/Qt/6.9.1/mingw_64/include/QtCore/qmetatype.h \
@@ -69,9 +70,7 @@ D:/UnmannedTesting/UnmannedTestingSystem-master/build/Desktop_Qt_6_9_1_MinGW_64_
   D:/Qt/6.9.1/mingw_64/include/QtCore/qobjectdefs_impl.h \
   D:/Qt/6.9.1/mingw_64/include/QtCore/qoverload.h \
   D:/Qt/6.9.1/mingw_64/include/QtCore/qpair.h \
-  D:/Qt/6.9.1/mingw_64/include/QtCore/qpoint.h \
   D:/Qt/6.9.1/mingw_64/include/QtCore/qprocessordetection.h \
-  D:/Qt/6.9.1/mingw_64/include/QtCore/qrect.h \
   D:/Qt/6.9.1/mingw_64/include/QtCore/qrefcount.h \
   D:/Qt/6.9.1/mingw_64/include/QtCore/qscopedpointer.h \
   D:/Qt/6.9.1/mingw_64/include/QtCore/qscopeguard.h \
@@ -80,8 +79,6 @@ D:/UnmannedTesting/UnmannedTestingSystem-master/build/Desktop_Qt_6_9_1_MinGW_64_
   D:/Qt/6.9.1/mingw_64/include/QtCore/qshareddata_impl.h \
   D:/Qt/6.9.1/mingw_64/include/QtCore/qsharedpointer.h \
   D:/Qt/6.9.1/mingw_64/include/QtCore/qsharedpointer_impl.h \
-  D:/Qt/6.9.1/mingw_64/include/QtCore/qsize.h \
-  D:/Qt/6.9.1/mingw_64/include/QtCore/qspan.h \
   D:/Qt/6.9.1/mingw_64/include/QtCore/qstdlibdetection.h \
   D:/Qt/6.9.1/mingw_64/include/QtCore/qstring.h \
   D:/Qt/6.9.1/mingw_64/include/QtCore/qstringalgorithms.h \
@@ -121,39 +118,18 @@ D:/UnmannedTesting/UnmannedTestingSystem-master/build/Desktop_Qt_6_9_1_MinGW_64_
   D:/Qt/6.9.1/mingw_64/include/QtCore/qtypes.h \
   D:/Qt/6.9.1/mingw_64/include/QtCore/qutf8stringview.h \
   D:/Qt/6.9.1/mingw_64/include/QtCore/qvariant.h \
+  D:/Qt/6.9.1/mingw_64/include/QtCore/qvariantmap.h \
   D:/Qt/6.9.1/mingw_64/include/QtCore/qvarlengtharray.h \
+  D:/Qt/6.9.1/mingw_64/include/QtCore/qvector.h \
   D:/Qt/6.9.1/mingw_64/include/QtCore/qversiontagging.h \
   D:/Qt/6.9.1/mingw_64/include/QtCore/qxptype_traits.h \
   D:/Qt/6.9.1/mingw_64/include/QtCore/qyieldcpu.h \
-  D:/Qt/6.9.1/mingw_64/include/QtGui/qaction.h \
-  D:/Qt/6.9.1/mingw_64/include/QtGui/qbitmap.h \
-  D:/Qt/6.9.1/mingw_64/include/QtGui/qbrush.h \
-  D:/Qt/6.9.1/mingw_64/include/QtGui/qcolor.h \
-  D:/Qt/6.9.1/mingw_64/include/QtGui/qcursor.h \
-  D:/Qt/6.9.1/mingw_64/include/QtGui/qfont.h \
-  D:/Qt/6.9.1/mingw_64/include/QtGui/qfontinfo.h \
-  D:/Qt/6.9.1/mingw_64/include/QtGui/qfontmetrics.h \
-  D:/Qt/6.9.1/mingw_64/include/QtGui/qfontvariableaxis.h \
-  D:/Qt/6.9.1/mingw_64/include/QtGui/qicon.h \
-  D:/Qt/6.9.1/mingw_64/include/QtGui/qimage.h \
-  D:/Qt/6.9.1/mingw_64/include/QtGui/qkeysequence.h \
-  D:/Qt/6.9.1/mingw_64/include/QtGui/qpaintdevice.h \
-  D:/Qt/6.9.1/mingw_64/include/QtGui/qpalette.h \
-  D:/Qt/6.9.1/mingw_64/include/QtGui/qpixelformat.h \
-  D:/Qt/6.9.1/mingw_64/include/QtGui/qpixmap.h \
-  D:/Qt/6.9.1/mingw_64/include/QtGui/qpolygon.h \
-  D:/Qt/6.9.1/mingw_64/include/QtGui/qregion.h \
-  D:/Qt/6.9.1/mingw_64/include/QtGui/qrgb.h \
-  D:/Qt/6.9.1/mingw_64/include/QtGui/qrgba64.h \
   D:/Qt/6.9.1/mingw_64/include/QtGui/qtgui-config.h \
   D:/Qt/6.9.1/mingw_64/include/QtGui/qtguiexports.h \
   D:/Qt/6.9.1/mingw_64/include/QtGui/qtguiglobal.h \
-  D:/Qt/6.9.1/mingw_64/include/QtGui/qtransform.h \
-  D:/Qt/6.9.1/mingw_64/include/QtGui/qwindowdefs.h \
-  D:/Qt/6.9.1/mingw_64/include/QtGui/qwindowdefs_win.h \
   D:/Qt/6.9.1/mingw_64/include/QtWidgets/QDialog \
+  D:/Qt/6.9.1/mingw_64/include/QtWidgets/QWidget \
   D:/Qt/6.9.1/mingw_64/include/QtWidgets/qdialog.h \
-  D:/Qt/6.9.1/mingw_64/include/QtWidgets/qsizepolicy.h \
   D:/Qt/6.9.1/mingw_64/include/QtWidgets/qtwidgets-config.h \
   D:/Qt/6.9.1/mingw_64/include/QtWidgets/qtwidgetsexports.h \
   D:/Qt/6.9.1/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
@@ -251,7 +227,6 @@ D:/UnmannedTesting/UnmannedTestingSystem-master/build/Desktop_Qt_6_9_1_MinGW_64_
   D:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/uses_allocator_args.h \
   D:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/utility.h \
   D:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/vector.tcc \
-  D:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cassert \
   D:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cctype \
   D:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cerrno \
   D:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/chrono \

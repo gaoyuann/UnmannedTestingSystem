@@ -5,6 +5,8 @@
 
 #include "UserManageWindow.h"
 #include "OrgManageWindow.h"
+#include "PermissionManageWindow.h"
+#include "DataDicWindow.h"
 
 namespace Ui {
 class SystemManageWindow;
@@ -33,6 +35,8 @@ private:
     Ui::SystemManageWindow *ui;
     UserManageWindow *userManageWindow;
     OrgManageWindow *orgManageWindow;
+    PermissionManageWindow *permissionManageWindow;
+    DataDicWindow *dataDicWindow;
     void setupConnections();
 };
 

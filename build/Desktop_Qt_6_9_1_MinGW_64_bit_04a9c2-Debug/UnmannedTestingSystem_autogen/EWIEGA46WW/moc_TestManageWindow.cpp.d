@@ -48,7 +48,6 @@ D:/UnmannedTesting/UnmannedTestingSystem-master/build/Desktop_Qt_6_9_1_MinGW_64_
   D:/Qt/6.9.1/mingw_64/include/QtCore/qdatastream.h \
   D:/Qt/6.9.1/mingw_64/include/QtCore/qdatetime.h \
   D:/Qt/6.9.1/mingw_64/include/QtCore/qdebug.h \
-  D:/Qt/6.9.1/mingw_64/include/QtCore/qendian.h \
   D:/Qt/6.9.1/mingw_64/include/QtCore/qexceptionhandling.h \
   D:/Qt/6.9.1/mingw_64/include/QtCore/qfile.h \
   D:/Qt/6.9.1/mingw_64/include/QtCore/qfiledevice.h \
@@ -147,20 +146,10 @@ D:/UnmannedTesting/UnmannedTestingSystem-master/build/Desktop_Qt_6_9_1_MinGW_64_
   D:/Qt/6.9.1/mingw_64/include/QtCore/qversiontagging.h \
   D:/Qt/6.9.1/mingw_64/include/QtCore/qxptype_traits.h \
   D:/Qt/6.9.1/mingw_64/include/QtCore/qyieldcpu.h \
-  D:/Qt/6.9.1/mingw_64/include/QtGui/qaction.h \
-  D:/Qt/6.9.1/mingw_64/include/QtGui/qbitmap.h \
-  D:/Qt/6.9.1/mingw_64/include/QtGui/qbrush.h \
   D:/Qt/6.9.1/mingw_64/include/QtGui/qcolor.h \
-  D:/Qt/6.9.1/mingw_64/include/QtGui/qcursor.h \
-  D:/Qt/6.9.1/mingw_64/include/QtGui/qfont.h \
-  D:/Qt/6.9.1/mingw_64/include/QtGui/qfontinfo.h \
-  D:/Qt/6.9.1/mingw_64/include/QtGui/qfontmetrics.h \
-  D:/Qt/6.9.1/mingw_64/include/QtGui/qfontvariableaxis.h \
   D:/Qt/6.9.1/mingw_64/include/QtGui/qicon.h \
   D:/Qt/6.9.1/mingw_64/include/QtGui/qimage.h \
-  D:/Qt/6.9.1/mingw_64/include/QtGui/qkeysequence.h \
   D:/Qt/6.9.1/mingw_64/include/QtGui/qpaintdevice.h \
-  D:/Qt/6.9.1/mingw_64/include/QtGui/qpalette.h \
   D:/Qt/6.9.1/mingw_64/include/QtGui/qpixelformat.h \
   D:/Qt/6.9.1/mingw_64/include/QtGui/qpixmap.h \
   D:/Qt/6.9.1/mingw_64/include/QtGui/qpolygon.h \
@@ -192,7 +181,6 @@ D:/UnmannedTesting/UnmannedTestingSystem-master/build/Desktop_Qt_6_9_1_MinGW_64_
   D:/Qt/6.9.1/mingw_64/include/QtWidgets/qdialogbuttonbox.h \
   D:/Qt/6.9.1/mingw_64/include/QtWidgets/qmainwindow.h \
   D:/Qt/6.9.1/mingw_64/include/QtWidgets/qmessagebox.h \
-  D:/Qt/6.9.1/mingw_64/include/QtWidgets/qsizepolicy.h \
   D:/Qt/6.9.1/mingw_64/include/QtWidgets/qtabwidget.h \
   D:/Qt/6.9.1/mingw_64/include/QtWidgets/qtwidgets-config.h \
   D:/Qt/6.9.1/mingw_64/include/QtWidgets/qtwidgetsexports.h \

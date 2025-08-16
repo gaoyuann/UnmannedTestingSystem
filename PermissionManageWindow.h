@@ -16,6 +16,7 @@ class PermissionManageWindow : public QWidget
 public:
     explicit PermissionManageWindow(QWidget *parent = nullptr);
     ~PermissionManageWindow();
+    void refreshData();
 
 signals:
     void backToSystemManage();

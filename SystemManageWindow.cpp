@@ -6,7 +6,9 @@ SystemManageWindow::SystemManageWindow(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::SystemManageWindow),
     userManageWindow(nullptr),
-    orgManageWindow(nullptr)
+    orgManageWindow(nullptr),
+    permissionManageWindow(nullptr),
+    dataDicWindow(nullptr)
 {
     ui->setupUi(this);
     setupConnections();
@@ -15,14 +17,10 @@ SystemManageWindow::SystemManageWindow(QWidget *parent) :
 SystemManageWindow::~SystemManageWindow()
 {
     delete ui;
-    if (userManageWindow) {
-        delete userManageWindow;
-        userManageWindow = nullptr;
-    }
-    if (orgManageWindow) {
-        delete orgManageWindow;
-        orgManageWindow = nullptr;
-    }
+    if (userManageWindow) delete userManageWindow;
+    if (orgManageWindow) delete orgManageWindow;
+    if (permissionManageWindow) delete permissionManageWindow;
+    if (dataDicWindow) delete dataDicWindow;
 }
 
 void SystemManageWindow::setupConnections()
@@ -91,13 +89,40 @@ void SystemManageWindow::onOrgManageBack() {
 
 void SystemManageWindow::onBtnPermissionManageClicked()
 {
-    emit statusMessageRequested("权限管理功能待实现", 2000);
-    QMessageBox::information(this, "提示", "权限管理功能待实现");
+    if (!permissionManageWindow) {
+        permissionManageWindow = new PermissionManageWindow(this);
+        connect(permissionManageWindow, &PermissionManageWindow::backToSystemManage,
+                this, [=]() {
+                    this->show();
+                    this->raise();
+                    permissionManageWindow->hide();
+                });
+        connect(permissionManageWindow, &PermissionManageWindow::statusMessageRequested,
+                this, &SystemManageWindow::statusMessageRequested);
+    }
+    this->hide();
+    permissionManageWindow->show();
+    permissionManageWindow->raise();
+    permissionManageWindow->refreshData();
+    emit statusMessageRequested("打开权限管理模块", 2000);
 }
 
 
 void SystemManageWindow::onBtnDictManageClicked()
 {
-    emit statusMessageRequested("数据字典功能待实现", 2000);
-    QMessageBox::information(this, "提示", "数据字典功能待实现");
+    if (!dataDicWindow) {
+        dataDicWindow = new DataDicWindow(this);
+        connect(dataDicWindow, &DataDicWindow::backToSystemManage,
+                this, [=]() {
+                    this->show();
+                    this->raise();
+                    dataDicWindow->hide();
+                });
+        connect(dataDicWindow, &DataDicWindow::statusMessageRequested,
+                this, &SystemManageWindow::statusMessageRequested);
+    }
+    this->hide();
+    dataDicWindow->show();
+    dataDicWindow->raise();
+    emit statusMessageRequested("打开数据字典管理模块", 2000);
 }
